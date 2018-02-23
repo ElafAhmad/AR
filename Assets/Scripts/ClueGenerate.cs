@@ -9,20 +9,26 @@ public class ClueGenerate : MonoBehaviour {
 	private string selectedSceneName;
 	private string[] sceneNames = {"Robbery","Murder","Drug"};
 	private GameObject hitParent;
-	public GameObject[] items;
-//	public GameObject[] characters;
-	public GameObject[] reservedObjects;
-	public GameObject[] selectedObjects;
-	private List<GameObject> reservedObjectLists = new List<GameObject>();
 
+	public GameObject[] itemspool;
+	public GameObject[] items;
+	public GameObject[] characters;
+
+	private List<GameObject> itemObjectLists = new List<GameObject>();
+	private List<GameObject> charactersObjectLists = new List<GameObject>();
+	public GameObject[] selectedObjects;
+	private List<GameObject> lureObjectLists = new List<GameObject>();
+	public GameObject[] lureObjects;
 
 	// Use this for initialization
 	void Awake(){
 		sceneName = SelectScene ();
 		print (sceneName);
+		ConstructPool ();
 
 		SelectItemNCharacter();
 		hitParent = GameObject.Find ("HitCubeParent");
+		SelectLureObject ();
 	}
 
 	void Start () {
@@ -45,6 +51,11 @@ public class ClueGenerate : MonoBehaviour {
 			obj.transform.parent = hitParent.transform;
 		}
 
+		for (int i=0; i<lureObjects.Length; i++){
+			GameObject obj = Instantiate (lureObjects [i], new Vector3 (Random.Range (-2f, 2f), 1f,Random.Range (-2f, 2f)),Quaternion.identity);
+			obj.SetActive (true);
+			obj.transform.parent = hitParent.transform;
+		}
 	}
 	
 	// Update is called once per frame
@@ -53,68 +64,79 @@ public class ClueGenerate : MonoBehaviour {
 	}
 
 	string SelectScene(){
-		
 		selectedSceneName = sceneNames [Random.Range (0, 3)];
 		return selectedSceneName;
+	}
+
+	void ConstructPool(){
+		if (sceneName == "Robbery") {
+			var temp1 = Resources.LoadAll<GameObject>("CluesPrefabs/Murder/Item");
+			var temp2 = Resources.LoadAll<GameObject>("CluesPrefabs/Drug/Item");
+			itemspool = temp1.Concat(temp2).ToArray();
+		}
+		else if (sceneName == "Murder") {
+			var temp1 = Resources.LoadAll<GameObject>("CluesPrefabs/Robbery/Item");
+			var temp2 = Resources.LoadAll<GameObject>("CluesPrefabs/Drug/Item");
+			itemspool = temp1.Concat(temp2).ToArray();
+		}
+		else if (sceneName == "Drug") {
+			var temp1 = Resources.LoadAll<GameObject>("CluesPrefabs/Robbery/Item");
+			var temp2 = Resources.LoadAll<GameObject>("CluesPrefabs/Murder/Item");
+			itemspool = temp1.Concat(temp2).ToArray();
+		}
 
 	}
 
 	void SelectItemNCharacter(){
-		
 		if (sceneName == "Robbery") {
-
-			items = Resources.LoadAll<GameObject>("CluesPrefabs/Robbery");
-
-//			items = GameObject.FindGameObjectsWithTag ("iRobbery");
-//			characters = GameObject.FindGameObjectsWithTag ("cRobbery");
-			ReservedObject ();
-			SelectedObject ();
-
+			items = Resources.LoadAll<GameObject>("CluesPrefabs/Robbery/Item");
+			characters = Resources.LoadAll<GameObject>("CluesPrefabs/Robbery/character");
+			SelectTrueObject();
 		}
 		else if (sceneName == "Murder") {
-
-			items = Resources.LoadAll<GameObject>("CluesPrefabs/Murder");
-
-//			items = GameObject.FindGameObjectsWithTag ("iMurder");
-//			characters = GameObject.FindGameObjectsWithTag ("cMurder");
-			ReservedObject ();
-			SelectedObject ();
-
+			items = Resources.LoadAll<GameObject>("CluesPrefabs/Murder/Item");
+			characters = Resources.LoadAll<GameObject>("CluesPrefabs/Murder/character");
+			SelectTrueObject();
 		}
 		else if (sceneName == "Drug") {
-
-			items = Resources.LoadAll<GameObject>("CluesPrefabs/Drug");
-
-//			items = GameObject.FindGameObjectsWithTag ("iDrug");
-//			characters = GameObject.FindGameObjectsWithTag ("cDrug");
-			ReservedObject ();
-			SelectedObject ();
-
+			items = Resources.LoadAll<GameObject>("CluesPrefabs/Drug/Item");
+			characters = Resources.LoadAll<GameObject>("CluesPrefabs/Drug/character");
+			SelectTrueObject();
 		}
-
 	}
 
-	void ReservedObject(){
-		
-//		reservedObjects = new GameObject[items.Length + characters.Length];
-//		items.CopyTo (reservedObjects, 0);
-//		characters.CopyTo (reservedObjects, items.Length);
-		reservedObjects = items;
-		reservedObjects.Reverse ();
-	}
-
-	void SelectedObject(){
-		
-		reservedObjectLists = reservedObjects.ToList ();
+	void SelectTrueObject(){
+		itemObjectLists =  items.ToList ();
+		charactersObjectLists =  characters.ToList ();
 		selectedObjects = new GameObject[3];
-		for (int i = 0; i < selectedObjects.Length; i++) {
-			var index = Random.Range(0, reservedObjectLists.Count);
-			selectedObjects[i] = reservedObjectLists[index];
-			selectedObjects[i].SetActive(true);
-			reservedObjectLists.RemoveAt(index);
-		}
-		reservedObjects = reservedObjectLists.ToArray ();
 
+		for (int i = 0; i < 2; i++) {
+			var index = Random.Range(0, itemObjectLists.Count);
+			selectedObjects[i] = itemObjectLists[index];
+			selectedObjects[i].SetActive(true);
+			itemObjectLists.RemoveAt(index);
+		}
+		items = itemObjectLists.ToArray ();
+
+		for (int i = 0; i < 1; i++) {
+			var index = Random.Range(0, charactersObjectLists.Count);
+			selectedObjects[i+2] = charactersObjectLists[index];
+			selectedObjects[i+2].SetActive(true);
+			charactersObjectLists.RemoveAt(index);
+		}
+		characters = charactersObjectLists.ToArray ();
 	}
 
+	void SelectLureObject(){
+		lureObjectLists =  itemspool.ToList ();
+		lureObjects = new GameObject[2];
+
+		for (int i = 0; i < 2; i++) {
+			var index = Random.Range(0, lureObjectLists.Count);
+			lureObjects[i] = lureObjectLists[index];
+			lureObjects[i].SetActive(true);
+			lureObjectLists.RemoveAt(index);
+		}
+		itemspool = lureObjectLists.ToArray ();
+	}
 }

@@ -3,13 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - iRobbery
-  - cRobbery
-  - iMurder
-  - cMurder
-  - iDrug
-  - cDrug
+  tags: []
   layers:
   - Default
   - TransparentFX

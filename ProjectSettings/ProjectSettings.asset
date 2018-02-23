@@ -4,10 +4,10 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 14
-  productGUID: 96f8a2c1fd7ace544b0e19ad60a6eb55
+  productGUID: 00000000000000000000000000000000
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
-  defaultScreenOrientation: 3
+  defaultScreenOrientation: 4
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
@@ -161,7 +161,7 @@ PlayerSettings:
     Android: com.Company.ProductName
     Standalone: unity.Unity Technologies.Native Rendering Plugin Example
     Tizen: com.Company.ProductName
-    iOS: com.bank.ar
+    iOS: com.unity.arkitscene
     tvOS: com.Company.ProductName
   buildNumber:
     iOS: 0
@@ -269,7 +269,7 @@ PlayerSettings:
       m_Icon: {fileID: 0}
       m_Width: 128
       m_Height: 128
-      m_Kind: 37003
+      m_Kind: 44034
   m_BuildTargetBatching: []
   m_BuildTargetGraphicsAPIs:
   - m_BuildTarget: AndroidPlayer
@@ -759,12 +759,12 @@ PlayerSettings:
     Game_Performance: 0
     Hub: 0
     Purchasing: 0
-    UNet: 1
+    UNet: 0
     Unity_Ads: 0
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
   cloudProjectId: 44b02156-23a7-4a78-8974-d025d531f6a3
-  projectName: AR (1)
+  projectName: 
   organizationId: onishield
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
