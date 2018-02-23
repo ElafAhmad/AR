@@ -4,10 +4,10 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 14
-  productGUID: 00000000000000000000000000000000
+  productGUID: 3299551c2f8f1f049a0db0cba02de59f
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
-  defaultScreenOrientation: 4
+  defaultScreenOrientation: 3
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
@@ -161,7 +161,7 @@ PlayerSettings:
     Android: com.Company.ProductName
     Standalone: unity.Unity Technologies.Native Rendering Plugin Example
     Tizen: com.Company.ProductName
-    iOS: com.unity.arkitscene
+    iOS: com.bank.ar
     tvOS: com.Company.ProductName
   buildNumber:
     iOS: 0
@@ -764,7 +764,7 @@ PlayerSettings:
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
   cloudProjectId: 44b02156-23a7-4a78-8974-d025d531f6a3
-  projectName: 
+  projectName: AR (1)
   organizationId: onishield
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0

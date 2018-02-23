@@ -52,10 +52,13 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Components\Simple UI\Samples\IconPreview.cs" />
-     <Compile Include="Assets\PickUpObject.cs" />
      <Compile Include="Assets\Scripts\ClueGenerate.cs" />
+     <Compile Include="Assets\Scripts\Item.cs" />
      <Compile Include="Assets\Scripts\LoadSceneOnClick.cs" />
+     <Compile Include="Assets\Scripts\MasterGameVolumeController.cs" />
      <Compile Include="Assets\Scripts\MasterVolumeController.cs" />
+     <Compile Include="Assets\Scripts\PickUpObject.cs" />
+     <Compile Include="Assets\Scripts\Temp.cs" />
      <Compile Include="Assets\UnityARKitPlugin\ARKitRemote\ARKitFaceTrackingRemoteConnection.cs" />
      <Compile Include="Assets\UnityARKitPlugin\ARKitRemote\ARKitRemoteConnection.cs" />
      <Compile Include="Assets\UnityARKitPlugin\ARKitRemote\ConnectionMessageIds.cs" />

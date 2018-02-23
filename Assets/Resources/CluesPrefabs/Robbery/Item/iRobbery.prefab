@@ -23,7 +23,6 @@ GameObject:
   - component: {fileID: 65153598704996834}
   - component: {fileID: 23847909674923202}
   - component: {fileID: 54557313490107112}
-  - component: {fileID: 114969421178764274}
   m_Layer: 0
   m_Name: iRobbery
   m_TagString: iRobbery
@@ -112,14 +111,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.5, y: 1.5, z: 1.5}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114969421178764274
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1780217144703038}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3986c5eebe470843aaf84a43655659b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

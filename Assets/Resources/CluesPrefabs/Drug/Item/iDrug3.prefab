@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 65689110478932856}
   - component: {fileID: 23987301565824476}
   - component: {fileID: 54728790673659064}
+  - component: {fileID: 114706962539408100}
   m_Layer: 0
   m_Name: iDrug3
   m_TagString: iDrug
@@ -111,3 +112,14 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114706962539408100
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1527652549113716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8df8fc7f8adf4f545a6285052ba882e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
