@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 public class MasterGameVolumeController : MonoBehaviour {
 	public AudioSource clickSound;
 	public AudioSource musicSound;
-	public float volume;
 	public bool musicMute;
 	public bool clickMute;
 	private int scenceIndex;
@@ -16,17 +15,17 @@ public class MasterGameVolumeController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		t = FindObjectOfType<Temp> ();
-		volume = t.musicVolume;
 		musicMute = t.musicMute;
 		clickMute = t.clickMute;
+		clickSound.mute = !clickMute;
+		musicSound.mute = !musicMute;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		t = FindObjectOfType<Temp> ();
 		clickSound.mute = !clickMute;
 		musicSound.mute = !musicMute;
-		clickSound.volume = volume;
-		musicSound.volume = volume;
 	}
 
 	public void PlayClickSound(){
@@ -34,10 +33,12 @@ public class MasterGameVolumeController : MonoBehaviour {
 	}
 
 	public void OnOffMusic(){
+		musicMute = musicSound.mute;
 		musicSound.mute = !musicSound.mute;
 	}
 
 	public void OnOffEffect(){
+		clickMute = clickSound.mute;
 		clickSound.mute = !clickSound.mute;
 	}
 		

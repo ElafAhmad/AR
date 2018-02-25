@@ -1,14 +1,16 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PickUpObject.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Temp.cs">
     <Files>
       <File FileName="Assets\Scripts\ClueGenerate.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\MasterVolumeController.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\LoadSceneOnClick.cs" Line="10" Column="13" />
-      <File FileName="Assets\Scripts\Temp.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\MasterGameVolumeController.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\PickUpObject.cs" Line="38" Column="3" />
-      <File FileName="Assets\Scripts\Item.cs" Line="18" Column="3" />
+      <File FileName="Assets\Scripts\LoadSceneOnClick.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Temp.cs" Line="24" Column="30" />
+      <File FileName="Assets\Scripts\PickUpObject.cs" Line="45" Column="25" />
+      <File FileName="Assets\Scripts\Item.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\MasterGameVolumeController.cs" Line="26" Column="33" />
+      <File FileName="Assets\Scripts\MasterVolumeController.cs" Line="11" Column="24" />
+      <File FileName="Assets\Scripts\SettingMusicButtonController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\SettingClickButtonController.cs" Line="14" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

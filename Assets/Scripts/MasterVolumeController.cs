@@ -10,7 +10,6 @@ public class MasterVolumeController : MonoBehaviour {
 	public AudioSource musicSound;
 	public bool musicMute;
 	public bool clickMute;
-	public float volume;
 	private int scenceIndex;
 
 	// Use this for initialization
@@ -21,9 +20,6 @@ public class MasterVolumeController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		volume = slider.value;
-		clickSound.volume = volume;
-		musicSound.volume = volume;
 	}
 
 	public void PlayClickSound(){

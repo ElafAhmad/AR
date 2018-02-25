@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Temp : MonoBehaviour {
 
-	public float musicVolume;
 	public bool musicMute;
 	public bool clickMute;
-	MasterVolumeController mVC;
+	public MasterVolumeController mVC;
+	public MasterGameVolumeController mGVC;
 
 	// Use this for initialization
 	void Start () {
@@ -17,8 +17,10 @@ public class Temp : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		musicVolume = mVC.volume;
+		mGVC = FindObjectOfType<MasterGameVolumeController> ();
 		musicMute = mVC.musicMute;
 		clickMute = mVC.clickMute;
+		musicMute = mGVC.musicMute;
+		clickMute = mGVC.clickMute;
 	}
 }

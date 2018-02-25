@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114419367129803896}
   m_Layer: 0
   m_Name: iDrug2
-  m_TagString: iDrug
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
