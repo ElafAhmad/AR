@@ -11,10 +11,10 @@ public class PickUpObject : MonoBehaviour {
 	public GameObject itemPanel;
 	public GameObject jornalButtonPanel;
 	public GameObject jornalPanel;
+	public GameObject targer;
 
 	// Use this for initialization
 	void Start () {
-		
 	}
 	
 	// Update is called once per frame
@@ -26,6 +26,7 @@ public class PickUpObject : MonoBehaviour {
 			if (hit.transform.tag == "Item" && !isPickup ) {
 				pickUpPanel.SetActive (true);
 				TestIsJornal ();
+				targer = hit.transform.gameObject;
 //			} else {
 //				pickUpPanel.SetActive (false);
 			}

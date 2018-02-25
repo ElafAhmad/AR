@@ -60,6 +60,7 @@
      <Compile Include="Assets\Scripts\PickUpObject.cs" />
      <Compile Include="Assets\Scripts\SettingClickButtonController.cs" />
      <Compile Include="Assets\Scripts\SettingMusicButtonController.cs" />
+     <Compile Include="Assets\Scripts\ShowItemDetail.cs" />
      <Compile Include="Assets\Scripts\Temp.cs" />
      <Compile Include="Assets\UnityARKitPlugin\ARKitRemote\ARKitFaceTrackingRemoteConnection.cs" />
      <Compile Include="Assets\UnityARKitPlugin\ARKitRemote\ARKitRemoteConnection.cs" />

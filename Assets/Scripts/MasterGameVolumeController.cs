@@ -35,11 +35,13 @@ public class MasterGameVolumeController : MonoBehaviour {
 	public void OnOffMusic(){
 		musicMute = musicSound.mute;
 		musicSound.mute = !musicSound.mute;
+
 	}
 
 	public void OnOffEffect(){
 		clickMute = clickSound.mute;
 		clickSound.mute = !clickSound.mute;
+
 	}
 		
 }

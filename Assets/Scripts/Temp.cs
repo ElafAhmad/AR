@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Temp : MonoBehaviour {
 
@@ -11,16 +12,27 @@ public class Temp : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		mVC = FindObjectOfType<MasterVolumeController> ();
 		DontDestroyOnLoad (this);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		mGVC = FindObjectOfType<MasterGameVolumeController> ();
-		musicMute = mVC.musicMute;
-		clickMute = mVC.clickMute;
-		musicMute = mGVC.musicMute;
-		clickMute = mGVC.clickMute;
+		int index = SceneManager.GetActiveScene().buildIndex;
+		CheckSceneIndex (index);
+
+	}
+
+	public void CheckSceneIndex(int index){
+		if (index == 0) {
+			mVC = FindObjectOfType<MasterVolumeController> ();
+			musicMute = mVC.musicMute;
+			clickMute = mVC.clickMute;
+		} 
+		else if (index == 1) {
+			mGVC = FindObjectOfType<MasterGameVolumeController> ();
+			musicMute = mGVC.musicMute;
+			clickMute = mGVC.clickMute;
+		}
+
 	}
 }

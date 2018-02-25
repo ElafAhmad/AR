@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class Item : MonoBehaviour {
 
+	public Renderer render;
 	// Use this for initialization
 	void Start () {
-		
+//		GetComponent(MeshRenderer).enabled = false;
+		render = GetComponent<Renderer>();
+		render.enabled = false;
 	}
 	
 	// Update is called once per frame
@@ -16,5 +19,11 @@ public class Item : MonoBehaviour {
 
 	public void Pickup(){
 		Destroy (gameObject);
+	}
+
+	void OnTriggerEnter(Collider other){
+		if (other.gameObject.tag == "MainCamera") {
+			render.enabled = true;
+		}
 	}
 }

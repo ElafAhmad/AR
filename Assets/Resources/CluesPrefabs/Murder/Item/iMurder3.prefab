@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 23383087341785970}
   - component: {fileID: 54253408935841370}
   - component: {fileID: 114075825396560240}
+  - component: {fileID: 65689256957954554}
   m_Layer: 0
   m_Name: iMurder3
   m_TagString: Item
@@ -100,6 +101,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 90
   m_CollisionDetection: 0
+--- !u!65 &65689256957954554
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1730174028506836}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2, z: 2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65735625452503312
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -123,3 +136,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8df8fc7f8adf4f545a6285052ba882e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  render: {fileID: 0}
