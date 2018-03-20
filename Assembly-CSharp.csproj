@@ -52,7 +52,9 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Components\Simple UI\Samples\IconPreview.cs" />
+     <Compile Include="Assets\Scripts\Clue.cs" />
      <Compile Include="Assets\Scripts\ClueGenerate.cs" />
+     <Compile Include="Assets\Scripts\ClueManager.cs" />
      <Compile Include="Assets\Scripts\Item.cs" />
      <Compile Include="Assets\Scripts\LoadSceneOnClick.cs" />
      <Compile Include="Assets\Scripts\MasterGameVolumeController.cs" />
@@ -135,13 +137,19 @@
      <Compile Include="Assets\UnityARKitPlugin\Plugins\iOS\UnityARKit\NativeInterface\ARUserAnchor.cs" />
      <Compile Include="Assets\UnityARKitPlugin\Plugins\iOS\UnityARKit\NativeInterface\UnityARSessionNativeInterface.cs" />
      <Compile Include="Assets\UnityARKitPlugin\UnityARKitPluginSettings.cs" />
+     <None Include="Assets\Resources\CluesPrefabs\Murder\Character\detail.txt" />
+     <None Include="Assets\Resources\CluesPrefabs\Drug\Item\detail.txt" />
+     <None Include="Assets\Resources\CluesPrefabs\Drug\Character\detail.txt" />
      <None Include="Assets\UnityARKitPlugin\Examples\Common\Shaders\MobileOcclusion.shader" />
      <None Include="Assets\Components\Simple UI\Fonts\OFL.txt" />
+     <None Include="Assets\Resources\CluesPrefabs\Murder\Item\detail.txt" />
      <None Include="Assets\UnityARKitPlugin\ARKitRemote\ARKITREMOTE.txt" />
+     <None Include="Assets\Resources\CluesPrefabs\Robbery\Character\detail.txt" />
      <None Include="Assets\UnityARKitPlugin\Plugins\iOS\UnityARKit\Shaders\YUVShaderLinear.shader" />
      <None Include="Assets\UnityARKitPlugin\Examples\Common\Shaders\MobileARShadow.shader" />
      <None Include="Assets\UnityARKitPlugin\Examples\Common\Shaders\InstancedSurfaceShader.shader" />
      <None Include="Assets\UnityARKitPlugin\Plugins\iOS\UnityARKit\Shaders\YUVShader.shader" />
+     <None Include="Assets\Resources\CluesPrefabs\Robbery\Item\detail.txt" />
  <Reference Include="Vuforia.UnityExtensions.Editor">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/VuforiaSupport/Managed/Editor/Vuforia.UnityExtensions.Editor.dll</HintPath>
  </Reference>
