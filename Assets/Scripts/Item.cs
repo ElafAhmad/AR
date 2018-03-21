@@ -5,6 +5,7 @@ using UnityEngine;
 public class Item : MonoBehaviour {
 
 	public Renderer render;
+	public Clue thisItem;
 	// Use this for initialization
 	void Start () {
 //		GetComponent(MeshRenderer).enabled = false;
@@ -25,5 +26,8 @@ public class Item : MonoBehaviour {
 		if (other.gameObject.tag == "MainCamera") {
 			render.enabled = true;
 		}
+	}
+	void GetItemDetail(){
+		
 	}
 }
