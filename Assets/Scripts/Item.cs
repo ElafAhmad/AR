@@ -5,6 +5,7 @@ using UnityEngine;
 public class Item : MonoBehaviour {
 
 	public Renderer render;
+	public bool testRen;
 	public Clue thisItem;
 	// Use this for initialization
 	void Start () {
@@ -15,7 +16,7 @@ public class Item : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		testRen = render.enabled;
 	}
 
 	public void Pickup(){

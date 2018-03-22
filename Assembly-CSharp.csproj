@@ -56,6 +56,7 @@
      <Compile Include="Assets\Scripts\ClueGenerate.cs" />
      <Compile Include="Assets\Scripts\ClueManager.cs" />
      <Compile Include="Assets\Scripts\Item.cs" />
+     <Compile Include="Assets\Scripts\Jornal.cs" />
      <Compile Include="Assets\Scripts\LoadSceneOnClick.cs" />
      <Compile Include="Assets\Scripts\MasterGameVolumeController.cs" />
      <Compile Include="Assets\Scripts\MasterVolumeController.cs" />
@@ -63,6 +64,7 @@
      <Compile Include="Assets\Scripts\SettingClickButtonController.cs" />
      <Compile Include="Assets\Scripts\SettingMusicButtonController.cs" />
      <Compile Include="Assets\Scripts\ShowItemDetail.cs" />
+     <Compile Include="Assets\Scripts\ShowItemPic.cs" />
      <Compile Include="Assets\Scripts\Temp.cs" />
      <Compile Include="Assets\UnityARKitPlugin\ARKitRemote\ARKitFaceTrackingRemoteConnection.cs" />
      <Compile Include="Assets\UnityARKitPlugin\ARKitRemote\ARKitRemoteConnection.cs" />
