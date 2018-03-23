@@ -1,0 +1,9 @@
+Bag
+item
+Bag of victim.
+Footprint
+item
+Footprint of someone.
+CCTV Footage
+item
+Footage from the CCTV which may capture the criminal.

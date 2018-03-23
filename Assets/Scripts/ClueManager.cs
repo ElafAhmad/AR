@@ -28,12 +28,12 @@ public class ClueManager : MonoBehaviour {
 //		string d = clues["Drug"].type;
 //		print (d);
 
-		ReadClueInformation ("Item","Robbery", "Assets/Resources/CluesPrefabs/Robbery/Item/detail.txt", RobberyItemList);
-		ReadClueInformation ("Item","Murder", "Assets/Resources/CluesPrefabs/Murder/Item/detail.txt", MurderItemList);
-		ReadClueInformation ("Item","Drug", "Assets/Resources/CluesPrefabs/Drug/Item/detail.txt", DrugItemList);
-		ReadClueInformation ("Character","Robbery", "Assets/Resources/CluesPrefabs/Robbery/Character/detail.txt", RobberyCharacterList);
-		ReadClueInformation ("Character","Murder", "Assets/Resources/CluesPrefabs/Murder/Character/detail.txt", MurderCharacterList);
-		ReadClueInformation ("Character","Drug", "Assets/Resources/CluesPrefabs/Drug/Character/detail.txt", DrugCharacterList);
+		ReadClueInformation ("Item","Robbery", "Assets/Texts/Robbery/Item/detail.txt", RobberyItemList);
+		ReadClueInformation ("Item","Murder", "Assets/Texts/Murder/Item/detail.txt", MurderItemList);
+		ReadClueInformation ("Item","Drug", "Assets/Texts/Drug/Item/detail.txt", DrugItemList);
+		ReadClueInformation ("Character","Robbery", "Assets/Texts/Robbery/Character/detail.txt", RobberyCharacterList);
+		ReadClueInformation ("Character","Murder", "Assets/Texts/Murder/Character/detail.txt", MurderCharacterList);
+		ReadClueInformation ("Character","Drug", "Assets/Texts/Drug/Character/detail.txt", DrugCharacterList);
 //		print ("Item"+RobberyItemList.Count + "," + MurderItemList.Count + "," + DrugItemList.Count);
 //		print ("Character"+RobberyCharacterList.Count + "," + MurderCharacterList.Count + "," + DrugCharacterList.Count); 
 
