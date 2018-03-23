@@ -9,6 +9,7 @@ public class Temp : MonoBehaviour {
 	public bool clickMute;
 	public MasterVolumeController mVC;
 	public MasterGameVolumeController mGVC;
+	public Vector3[] cluePos;
 
 	// Use this for initialization
 	void Start () {

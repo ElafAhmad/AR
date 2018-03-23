@@ -55,6 +55,7 @@
      <Compile Include="Assets\Scripts\Clue.cs" />
      <Compile Include="Assets\Scripts\ClueGenerate.cs" />
      <Compile Include="Assets\Scripts\ClueManager.cs" />
+     <Compile Include="Assets\Scripts\Hint.cs" />
      <Compile Include="Assets\Scripts\Item.cs" />
      <Compile Include="Assets\Scripts\Jornal.cs" />
      <Compile Include="Assets\Scripts\LoadSceneOnClick.cs" />

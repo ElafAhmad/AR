@@ -44,6 +44,10 @@ public class ClueGenerate : MonoBehaviour {
 	public Clue[] DrugItem;
 	public Clue[] DrugCharacter;
 
+	private List<Vector3> cluePosLists = new List<Vector3> ();
+	public Vector3[] cluePos;
+	private Temp t;
+
 	// Use this for initialization
 	void Awake(){
 		
@@ -51,6 +55,7 @@ public class ClueGenerate : MonoBehaviour {
 
 	void Start () {
 		cM = FindObjectOfType<ClueManager> ();
+		t = FindObjectOfType<Temp> ();
 
 		MurderItem = cM.MurderItemList.ToArray();
 		MurderCharacter = cM.MurderCharacterList.ToArray();
@@ -102,7 +107,9 @@ public class ClueGenerate : MonoBehaviour {
 			if (posZ > -0.25f) {
 				posZ += 0.5f;
 			}
-			GameObject obj = Instantiate (selectedClues [i].model, new Vector3 (posX, 2f, posZ),Quaternion.identity);
+			Vector3 posTemp = new Vector3 (posX, 2f, posZ);
+			cluePosLists.Add (posTemp);
+			GameObject obj = Instantiate (selectedClues [i].model, posTemp, Quaternion.identity);
 			if (selectedClues [i].type == "item") {
 				var tmp = obj.GetComponent<Item> ();
 				tmp.thisItem = selectedClues [i];
@@ -120,7 +127,9 @@ public class ClueGenerate : MonoBehaviour {
 			if (posZ > -0.25f) {
 				posZ += 0.5f;
 			}
-			GameObject obj = Instantiate (lureClues [i].model, new Vector3 (posX, 2f, posZ),Quaternion.identity);
+			Vector3 posTemp = new Vector3 (posX, 2f, posZ);
+			cluePosLists.Add (posTemp);
+			GameObject obj = Instantiate (lureClues [i].model, posTemp, Quaternion.identity);
 			if (lureClues [i].type == "item") {
 				var tmp = obj.GetComponent<Item> ();
 				tmp.thisItem = lureClues [i];
@@ -128,6 +137,9 @@ public class ClueGenerate : MonoBehaviour {
 			obj.SetActive (true);
 			obj.transform.parent = hitParent.transform;
 		}
+		cluePos = cluePosLists.ToArray();
+		t.cluePos = cluePos;
+
 	}
 	
 	// Update is called once per frame
