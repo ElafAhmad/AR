@@ -11,7 +11,7 @@ public class Item : MonoBehaviour {
 	void Start () {
 //		GetComponent(MeshRenderer).enabled = false;
 		render = GetComponent<Renderer>();
-		render.enabled = false;
+		render.enabled = true;
 	}
 	
 	// Update is called once per frame
