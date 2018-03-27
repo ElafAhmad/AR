@@ -14,6 +14,8 @@ public class ClueManager : MonoBehaviour {
 	public List<Clue> DrugCharacterList = new List<Clue> ();
 //	public Dictionary<string, Clue> clues = new Dictionary<string, Clue> ();
 
+	public TextAsset iMurder;
+
 	// Use this for initialization
 	void Awake() {
 
@@ -28,14 +30,22 @@ public class ClueManager : MonoBehaviour {
 //		string d = clues["Drug"].type;
 //		print (d);
 
-		ReadClueInformation ("Item","Robbery", "Assets/Texts/Robbery/Item/detail.txt", RobberyItemList);
-		ReadClueInformation ("Item","Murder", "Assets/Texts/Murder/Item/detail.txt", MurderItemList);
-		ReadClueInformation ("Item","Drug", "Assets/Texts/Drug/Item/detail.txt", DrugItemList);
-		ReadClueInformation ("Character","Robbery", "Assets/Texts/Robbery/Character/detail.txt", RobberyCharacterList);
-		ReadClueInformation ("Character","Murder", "Assets/Texts/Murder/Character/detail.txt", MurderCharacterList);
-		ReadClueInformation ("Character","Drug", "Assets/Texts/Drug/Character/detail.txt", DrugCharacterList);
+//		ReadClueInformation ("Item","Robbery", "Assets/Texts/Robbery/Item/detail.txt", RobberyItemList);
+//		ReadClueInformation ("Item","Murder", "Assets/Texts/Murder/Item/detail.txt", MurderItemList);
+//		ReadClueInformation ("Item","Drug", "Assets/Texts/Drug/Item/detail.txt", DrugItemList);
+//		ReadClueInformation ("Character","Robbery", "Assets/Texts/Robbery/Character/detail.txt", RobberyCharacterList);
+//		ReadClueInformation ("Character","Murder", "Assets/Texts/Murder/Character/detail.txt", MurderCharacterList);
+//		ReadClueInformation ("Character","Drug", "Assets/Texts/Drug/Character/detail.txt", DrugCharacterList);
+
 //		print ("Item"+RobberyItemList.Count + "," + MurderItemList.Count + "," + DrugItemList.Count);
 //		print ("Character"+RobberyCharacterList.Count + "," + MurderCharacterList.Count + "," + DrugCharacterList.Count); 
+
+		MakeList ("Item","Robbery", RobberyItemList);
+		MakeList ("Item","Murder", MurderItemList);
+		MakeList ("Item","Drug", DrugItemList);
+		MakeList ("Character","Robbery", RobberyCharacterList);
+		MakeList ("Character","Murder", MurderCharacterList);
+		MakeList ("Character","Drug", DrugCharacterList);
 
 //		Clue tmp =  MurderItemList[2];
 //		print (tmp);
@@ -62,18 +72,42 @@ public class ClueManager : MonoBehaviour {
 		{
 			Clue preset = new Clue();
 			preset.tag = tag;
+			Debug.Log(preset.tag);
 			preset.name = lines[i++];
+			Debug.Log(preset.name);
 			preset.type = lines[i++];
+			Debug.Log(preset.type);
 			preset.description = lines[i++];
+			Debug.Log(preset.description);
 			preset.model = Resources.Load<GameObject> ("CluesPrefabs/"+tag+"/"+type+"/"+preset.name);
-//			clues [preset.name] = preset;
+			Debug.Log(preset.model);
 			list.Add (preset);
 //			clues.Add ("i" + type + i,preset);
 
 		}
 	}
 
-	public void MakeList(){
-		
+	public void MakeList(string type, string tag, List<Clue> list){
+		TextAsset asset = Resources.Load("CluesPrefabs/"+tag+"/"+type+"/detail") as TextAsset;
+//		Debug.Log(asset);
+
+		var textAsset = asset.text.Split (new string[] { "\r\n"},System.StringSplitOptions.None);
+
+		for (int i = 0; i < textAsset.Length;){
+			Clue preset = new Clue();
+			preset.tag = tag;
+			preset.name = textAsset[i++];
+//			Debug.Log(preset.name.Length);
+//			Debug.Log(preset.name[0]);
+//			Debug.Log(preset.name[1]);
+//			Debug.Log(preset.name[2]);
+			preset.type = textAsset[i++];
+//			Debug.Log(preset.type);
+			preset.description = textAsset[i++];
+//			Debug.Log(preset.description);
+			preset.model = Resources.Load<GameObject> ("CluesPrefabs/"+tag+"/"+type+"/"+preset.name);
+//			Debug.Log(preset.model);
+			list.Add (preset);
+		}
 	}
 }

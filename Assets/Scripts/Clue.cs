@@ -2,7 +2,7 @@
 using UnityEngine;
 using System;
 
-public class Clue : IComparable<Clue> {
+public class Clue {
 
 	public string name;
 	public string type;
@@ -33,17 +33,5 @@ public class Clue : IComparable<Clue> {
 		tag = newTag;
 		model = null;
 	}
-
-	public int CompareTo(Clue other)
-	{
-		if(other == null)
-		{
-			return 1;
-		}
-
-		//Return the difference in power.
-		return 0;
-	}
-
-
+		
 }
