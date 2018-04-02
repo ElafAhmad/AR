@@ -5,11 +5,13 @@ using UnityEngine.UI;
 
 public class PickUpObject : MonoBehaviour {
 	private bool isPickup = false;
-	private bool isJornal = false;
 	public Camera cam;
 	public GameObject pickUpPanel;
 	public GameObject itemPanel;
 	public GameObject jornalButtonPanel;
+	public GameObject hintButtonPanel;
+	public GameObject settingButtonPanel;
+	public GameObject settingPanel;
 	public GameObject jornalPanel;
 	public GameObject targer;
 
@@ -20,50 +22,59 @@ public class PickUpObject : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		RaycastHit hit;
-		if (Physics.Raycast (cam.transform.position, cam.transform.forward, out hit, 0.5f)) {
+		if (Physics.Raycast (cam.transform.position, cam.transform.forward, out hit, 1f)) {
 			print ("HIT");
 			Debug.Log (hit.transform.name);
-			if (hit.transform.tag == "Item" && !isPickup ) {
+			if (hit.transform.tag == "Item" && !isPickup) {
 				pickUpPanel.SetActive (true);
-				TestIsJornal ();
 				targer = hit.transform.gameObject;
-//			} else {
-//				pickUpPanel.SetActive (false);
 			}
-		}
-		else if(isJornal){
-			jornalButtonPanel.SetActive (false);
 		} else {
 			pickUpPanel.SetActive (false);
-			jornalButtonPanel.SetActive (true);
 		}
 	}
 
-	public void IsPiackup(){
-		isPickup = false;
-	}
-		
 	public void PickedUp(){
 		isPickup = true;
 		pickUpPanel.SetActive (false);
 		itemPanel.SetActive (true);
 		jornalButtonPanel.SetActive (false);
+		hintButtonPanel.SetActive (false);
+	}
+
+	public void ClosePickup(){
+		isPickup = false;
+//		pickUpPanel.SetActive (true);
+		itemPanel.SetActive (false);
+		jornalButtonPanel.SetActive (true);
+		hintButtonPanel.SetActive (true);
 	}
 
 	public void Jornal(){
-		isJornal = true;
 		jornalPanel.SetActive (true);
+		jornalButtonPanel.SetActive (false);
+		hintButtonPanel.SetActive (false);
 	}
 
-	public void IsJornal(){
-		isJornal = false;
+	public void CloseJornal(){
+		jornalPanel.SetActive (false);
+		jornalButtonPanel.SetActive (true);
+		hintButtonPanel.SetActive (true);
 	}
 
-	public void TestIsJornal(){
-		if (isJornal) {
-			jornalButtonPanel.SetActive (false);
-		} else if (!isJornal) {
-			jornalButtonPanel.SetActive (true);
-		}
+	public void Setting(){
+		settingButtonPanel.SetActive (false);
+		settingPanel.SetActive (true);
+		itemPanel.SetActive (false);
+		jornalPanel.SetActive (false);
+		jornalButtonPanel.SetActive (false);
+		hintButtonPanel.SetActive (false);
+	}
+
+	public void CloseSetting(){
+		settingButtonPanel.SetActive (true);
+		settingPanel.SetActive (false);
+		CloseJornal ();
+		ClosePickup ();
 	}
 }

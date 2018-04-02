@@ -244,6 +244,9 @@ MonoBehaviour:
   pickUpPanel: {fileID: 366201049}
   itemPanel: {fileID: 815280894}
   jornalButtonPanel: {fileID: 53824697}
+  hintButtonPanel: {fileID: 574142806}
+  settingButtonPanel: {fileID: 753855988}
+  settingPanel: {fileID: 1155137104}
   jornalPanel: {fileID: 1164891545}
   targer: {fileID: 0}
 --- !u!1 &16
@@ -3883,7 +3886,7 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 15}
-        m_MethodName: IsJornal
+        m_MethodName: CloseJornal
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4216,7 +4219,7 @@ AudioListener:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1496552945}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!124 &1496552948
 Behaviour:
   m_ObjectHideFlags: 0
@@ -4401,6 +4404,17 @@ MonoBehaviour:
       - m_Target: {fileID: 1155137104}
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 15}
+        m_MethodName: Setting
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5183,6 +5197,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 15}
+        m_MethodName: CloseSetting
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1918498440
@@ -5309,7 +5334,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 15}
-        m_MethodName: IsPiackup
+        m_MethodName: ClosePickup
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
