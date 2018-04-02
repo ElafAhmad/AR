@@ -22,8 +22,15 @@ public class ShowItemPic : MonoBehaviour {
 		item = pUO.targer.GetComponent<Item> ();
 		if (isInstant) {
 			go = Instantiate (item.thisItem.model, transform.position, Quaternion.identity);
+//			var posX = go.transform.position.x;
+//			var posZ = go.transform.position.z;
+//			posX += 25;
+//			posZ -= 100;
+//			Vector3 pos = new Vector3 (posX, go.transform.position.y, posZ);
+//			go.transform.position = pos;
 			Destroy (go.GetComponent<Item> ());
-			go.transform.parent = this.transform; 
+			go.transform.parent = this.transform;
+			go.layer = 5;
 			go.transform.localScale += new Vector3(100f, 100f, 100f);
 			Renderer render = go.GetComponent<Renderer> ();
 			renTest = render.enabled;

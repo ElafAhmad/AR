@@ -91,7 +91,10 @@ public class ClueManager : MonoBehaviour {
 		TextAsset asset = Resources.Load("CluesPrefabs/"+tag+"/"+type+"/detail") as TextAsset;
 //		Debug.Log(asset);
 
+//--------------------------------------------------------- for windows ----------------------------------------------------------------------------
 		var textAsset = asset.text.Split (new string[] { "\r\n"},System.StringSplitOptions.None);
+//--------------------------------------------------------- for mac --------------------------------------------------------------------------------
+//		var textAsset = asset.text.Split (new char[] {'\n'});
 
 		for (int i = 0; i < textAsset.Length;){
 			Clue preset = new Clue();
