@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Components\Simple UI\Samples\IconPreview.cs" />
+     <Compile Include="Assets\Scripts\ButtonCooldown.cs" />
      <Compile Include="Assets\Scripts\Clue.cs" />
      <Compile Include="Assets\Scripts\ClueGenerate.cs" />
      <Compile Include="Assets\Scripts\ClueManager.cs" />
@@ -62,10 +63,12 @@
      <Compile Include="Assets\Scripts\MasterGameVolumeController.cs" />
      <Compile Include="Assets\Scripts\MasterVolumeController.cs" />
      <Compile Include="Assets\Scripts\PickUpObject.cs" />
+     <Compile Include="Assets\Scripts\RotatePreview.cs" />
      <Compile Include="Assets\Scripts\SettingClickButtonController.cs" />
      <Compile Include="Assets\Scripts\SettingMusicButtonController.cs" />
      <Compile Include="Assets\Scripts\ShowItemDetail.cs" />
      <Compile Include="Assets\Scripts\ShowItemPic.cs" />
+     <Compile Include="Assets\Scripts\ShowRotateReview.cs" />
      <Compile Include="Assets\Scripts\Temp.cs" />
      <Compile Include="Assets\UnityARKitPlugin\ARKitRemote\ARKitFaceTrackingRemoteConnection.cs" />
      <Compile Include="Assets\UnityARKitPlugin\ARKitRemote\ARKitRemoteConnection.cs" />

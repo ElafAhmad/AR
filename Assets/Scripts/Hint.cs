@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Hint : MonoBehaviour {
 
@@ -8,6 +9,8 @@ public class Hint : MonoBehaviour {
 	public GameObject cam;
 	public Vector3[] cluePos;
 	public Temp t;
+	private bool cooldown = false;
+	public Button button;
 
 	// Use this for initialization
 	void Start () {
@@ -26,11 +29,21 @@ public class Hint : MonoBehaviour {
 	}
 
 	public void ShowHint(){
-		for (int i = 0; i < t.cluePos.Length; i++) {
-			GameObject obj = Instantiate (prefab, cluePos [i], Quaternion.identity);
-			Vector3 pos = new Vector3 (cam.transform.position.x, obj.transform.position.y, cam.transform.transform.position.z);
-			obj.transform.LookAt (pos);
-			Destroy (obj, 3f);
+		if (cooldown == false) {
+			button.interactable = false;
+			Invoke ("ResetCooldown", 3.0f);
+			for (int i = 0; i < t.cluePos.Length; i++) {
+				GameObject obj = Instantiate (prefab, cluePos [i], Quaternion.identity);
+				Vector3 pos = new Vector3 (cam.transform.position.x, obj.transform.position.y, cam.transform.transform.position.z);
+				obj.transform.LookAt (pos);
+				Destroy (obj, 3f);
+			}
+			cooldown = true;
 		}
+	}
+
+	void ResetCooldown(){
+		cooldown = false;
+		button.interactable = true;
 	}
 }

@@ -14,8 +14,6 @@ public class ClueManager : MonoBehaviour {
 	public List<Clue> DrugCharacterList = new List<Clue> ();
 //	public Dictionary<string, Clue> clues = new Dictionary<string, Clue> ();
 
-	public TextAsset iMurder;
-
 	// Use this for initialization
 	void Awake() {
 
