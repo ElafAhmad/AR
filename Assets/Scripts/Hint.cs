@@ -11,6 +11,9 @@ public class Hint : MonoBehaviour {
 	public Temp t;
 	private bool cooldown = false;
 	public Button button;
+	private Image cdImage;
+	public Sprite cdSprite;
+	public Sprite cdResetSprite;
 
 	// Use this for initialization
 	void Start () {
@@ -31,6 +34,8 @@ public class Hint : MonoBehaviour {
 	public void ShowHint(){
 		if (cooldown == false) {
 			button.interactable = false;
+			cdImage = GetComponentInChildren<Image> ();
+			cdImage.sprite = cdSprite;
 			Invoke ("ResetCooldown", 3.0f);
 			for (int i = 0; i < t.cluePos.Length; i++) {
 				GameObject obj = Instantiate (prefab, cluePos [i], Quaternion.identity);
@@ -44,6 +49,7 @@ public class Hint : MonoBehaviour {
 
 	void ResetCooldown(){
 		cooldown = false;
+		cdImage.sprite = cdResetSprite;
 		button.interactable = true;
 	}
 }

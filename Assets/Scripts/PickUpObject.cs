@@ -13,6 +13,7 @@ public class PickUpObject : MonoBehaviour {
 	public GameObject settingButtonPanel;
 	public GameObject settingPanel;
 	public GameObject jornalPanel;
+	public GameObject itemPreviewPanel;
 	public GameObject targer;
 
 	// Use this for initialization
@@ -69,6 +70,7 @@ public class PickUpObject : MonoBehaviour {
 		jornalPanel.SetActive (false);
 		jornalButtonPanel.SetActive (false);
 		hintButtonPanel.SetActive (false);
+		itemPreviewPanel.SetActive (false);
 	}
 
 	public void CloseSetting(){

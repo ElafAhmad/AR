@@ -1,9 +1,0 @@
-cDrug
-character
-1.
-cDrug2
-character
-2.
-cDrug3
-character
-3.

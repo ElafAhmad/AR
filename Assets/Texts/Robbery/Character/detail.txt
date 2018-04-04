@@ -1,6 +1,0 @@
-cRobbery
-character
-1.
-cRobbery2
-character
-2.
