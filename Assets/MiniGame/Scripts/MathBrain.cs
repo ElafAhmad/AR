@@ -11,7 +11,11 @@ public class MathBrain : MonoBehaviour {
 	List<int> answerChoices = new List<int>();
 	public GameObject[] buttons = new GameObject[4];
 	int answer = -101;
-
+	public Image correct;
+	public Image wrong;
+	public GameObject miniGamePanel;
+	public GameObject itemPic_Panel;
+	public GameObject checkMiniGame;
 
 	void Start() 
 	{
@@ -127,11 +131,36 @@ public class MathBrain : MonoBehaviour {
 		Item item = pUO.targer.GetComponent<Item> ();
 
 		if (int.Parse(btn.GetComponentInChildren<Text>().text) == answer) {
-			btn.GetComponent<Image>().color = Color.green;
 			item.thisItem.isMinigame = true;
+			btn.GetComponent<Image>().color = Color.green;
+			correct.gameObject.SetActive (true);
+			Invoke ("Correct", 1.0f);
 			Debug.Log("Correct Answer");
 		} else {
 			btn.GetComponent<Image>().color = Color.red;
+			wrong.gameObject.SetActive (true);
+			Invoke ("Wrong", 1.0f);
 		}
 	}
+
+	void Correct(){
+		correct.gameObject.SetActive (false);
+		miniGamePanel.SetActive (false);
+		foreach (Transform child in itemPic_Panel.transform) {
+			child.gameObject.SetActive (true);
+		}
+		CheckIsMiniGame check = checkMiniGame.GetComponent<CheckIsMiniGame> ();
+		check.CheckMiniGame ();
+	}
+
+	void Wrong(){
+		wrong.gameObject.SetActive (false);
+		miniGamePanel.SetActive (false);
+		foreach (Transform child in itemPic_Panel.transform) {
+			child.gameObject.SetActive (true);
+		}
+		CheckIsMiniGame check = checkMiniGame.GetComponent<CheckIsMiniGame> ();
+		check.CheckMiniGame ();
+	}
+
 }
