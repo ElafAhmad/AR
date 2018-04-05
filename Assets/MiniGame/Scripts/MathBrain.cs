@@ -122,8 +122,13 @@ public class MathBrain : MonoBehaviour {
 
 	public void Check_Answer(Button btn)
 	{
+		GameObject gO = GameObject.Find ("Main Camera");
+		PickUpObject pUO = gO.GetComponent<PickUpObject> ();
+		Item item = pUO.targer.GetComponent<Item> ();
+
 		if (int.Parse(btn.GetComponentInChildren<Text>().text) == answer) {
 			btn.GetComponent<Image>().color = Color.green;
+			item.thisItem.isMinigame = true;
 			Debug.Log("Correct Answer");
 		} else {
 			btn.GetComponent<Image>().color = Color.red;

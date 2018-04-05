@@ -56,6 +56,7 @@
      <Compile Include="Assets\MiniGame\Scripts\MathBrain.cs" />
      <Compile Include="Assets\MiniGame\Scripts\PatternBrain.cs" />
      <Compile Include="Assets\Scripts\ButtonCooldown.cs" />
+     <Compile Include="Assets\Scripts\CheckIsMiniGame.cs" />
      <Compile Include="Assets\Scripts\Clue.cs" />
      <Compile Include="Assets\Scripts\ClueGenerate.cs" />
      <Compile Include="Assets\Scripts\ClueManager.cs" />
