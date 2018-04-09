@@ -1,6 +1,8 @@
-cRobbery
+Caden Holland
 character
-1.
-cRobbery2
+Hello, My name is Caden Holland.
+Robbery
+Vic Fernandez
 character
-2.
+Hi, My name is Vic Fernandez.
+Robbery

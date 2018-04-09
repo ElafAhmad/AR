@@ -1,9 +1,12 @@
-cMurder
+Elliot Reed
 character
-1.
-cMurder2
+Good Morning, I'm Elliot Reed.
+Murder
+Harper Smith
 character
-2.
-cMurder3
+Hello, My name is Harper Smith.
+Murder
+Emerson Logan
 character
-3.
+Emerson sir, Emerson Logan.
+Murder

@@ -1,12 +1,16 @@
 Gun
 item
 Just a gun.
+Found a fingerprint of
 Combatknife
 item
 There is a blood on it.
+Found a fingerprint of
 Bloodstain
 item
 Can be use to test for DNA.
+There is Luminol Reaction with blood of
 Bulletjacket
 item
 There is a fingerprint on it.
+Found a fingerprint of

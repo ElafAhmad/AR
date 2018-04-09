@@ -1,15 +1,20 @@
-iDrug
+Marijuana
 item
-1.
-iDrug2
+A Barrier bags filled with Marijuana.
+Found a fingerprint of
+Coke
 item
-2.
-iDrug3
+A Pack of Cocaine.
+Found a fingerprint of
+Syringe
 item
-3.
-iDrug4
+Used syringe.
+There is a traces of
+Bong
 item
-4.
-iDrug5
+A bong with ice cubes inside.
+Found the signs of use by
+Meth
 item
-5.
+A Meth in medicine bottles.
+the label is named

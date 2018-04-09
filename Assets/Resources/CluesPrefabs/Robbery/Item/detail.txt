@@ -1,9 +1,12 @@
 Bag
 item
 Bag of victim.
+Found a fingerprint of
 Footprint
 item
 Footprint of someone.
+This is simalar to
 CCTV Footage
 item
 Footage from the CCTV which may capture the criminal.
+Following people are in this footage :

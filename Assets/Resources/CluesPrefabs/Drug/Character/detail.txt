@@ -1,9 +1,12 @@
-cDrug
+Noah Reynolds
 character
-1.
-cDrug2
+Yo, Noah Reynolds at your service.
+Drug
+Mathew Ross
 character
-2.
-cDrug3
+Hi,I'm Mathew Ross. Anything i can help?
+Drug
+Reggie Campos
 character
-3.
+What's up, I'm Reggie Campos.
+Drug

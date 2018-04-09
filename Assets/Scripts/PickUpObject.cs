@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class PickUpObject : MonoBehaviour {
 	private bool isPickup = false;
+	private bool isTalk = false;
 	public Camera cam;
 	public GameObject pickUpPanel;
 	public GameObject itemPanel;
@@ -15,6 +16,8 @@ public class PickUpObject : MonoBehaviour {
 	public GameObject jornalPanel;
 	public GameObject itemPreviewPanel;
 	public GameObject targer;
+
+	public GameObject talkPanel;
 
 	// Use this for initialization
 	void Start () {
@@ -29,9 +32,13 @@ public class PickUpObject : MonoBehaviour {
 			if (hit.transform.tag == "Item" && !isPickup) {
 				pickUpPanel.SetActive (true);
 				targer = hit.transform.gameObject;
+			} else if (hit.transform.tag == "Character" && !isTalk) {
+				talkPanel.SetActive (true);
+				targer = hit.transform.gameObject;
 			}
 		} else {
 			pickUpPanel.SetActive (false);
+			talkPanel.SetActive (false);
 		}
 	}
 

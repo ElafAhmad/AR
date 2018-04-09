@@ -98,7 +98,7 @@ public class ClueManager : MonoBehaviour {
 			Clue preset = new Clue();
 			preset.tag = tag;
 			preset.name = textAsset[i++];
-//			Debug.Log(preset.name.Length);
+//			Debug.Log(preset.name+" : "+preset.name.Length);
 //			Debug.Log(preset.name[0]);
 //			Debug.Log(preset.name[1]);
 //			Debug.Log(preset.name[2]);
@@ -108,6 +108,8 @@ public class ClueManager : MonoBehaviour {
 //			Debug.Log(preset.description);
 			preset.model = Resources.Load<GameObject> ("CluesPrefabs/"+tag+"/"+type+"/"+preset.name);
 //			Debug.Log(preset.model);
+			preset.info = textAsset[i++];
+//			Debug.Log(preset.info+" : "+preset.info.Length);
 			list.Add (preset);
 		}
 	}

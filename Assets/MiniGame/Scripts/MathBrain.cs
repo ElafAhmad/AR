@@ -16,6 +16,8 @@ public class MathBrain : MonoBehaviour {
 	public GameObject miniGamePanel;
 	public GameObject itemPic_Panel;
 	public GameObject checkMiniGame;
+	public Jornal jornal;
+	public MasterGameVolumeController mGVC;
 
 	void Start() 
 	{
@@ -134,11 +136,14 @@ public class MathBrain : MonoBehaviour {
 			item.thisItem.isMinigame = true;
 			btn.GetComponent<Image>().color = Color.green;
 			correct.gameObject.SetActive (true);
+			mGVC.PlayCorrectSound ();
 			Invoke ("Correct", 1.0f);
+			jornal.ReceiveNewClue (item.thisItem);
 			Debug.Log("Correct Answer");
 		} else {
 			btn.GetComponent<Image>().color = Color.red;
 			wrong.gameObject.SetActive (true);
+			mGVC.PlayIncorrectSound ();
 			Invoke ("Wrong", 1.0f);
 		}
 	}

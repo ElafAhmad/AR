@@ -65,7 +65,7 @@ public class ClueGenerate : MonoBehaviour {
 		DrugCharacter = cM.DrugCharacterList.ToArray();
 
 		sceneName = SelectScene ();
-		print (sceneName);
+		print ("Select : " + sceneName + " Scene.");
 		ConstructPool ();
 
 		SelectItemNCharacter();
@@ -112,7 +112,16 @@ public class ClueGenerate : MonoBehaviour {
 			GameObject obj = Instantiate (selectedClues [i].model, posTemp, Quaternion.identity);
 			if (selectedClues [i].type == "item") {
 				var tmp = obj.GetComponent<Item> ();
+				selectedClues[i].isReal = true;
 				tmp.thisItem = selectedClues [i];
+//			}
+			} else if (selectedClues [i].type == "character") {
+				var tmp = obj.GetComponent<Character> ();
+				selectedClues [i].isReal = true;
+				tmp.thisCharacter = selectedClues [i];
+				if (i == 3) {
+					t.goalName = selectedClues [i].name;
+				}
 			}
 			obj.SetActive (true);
 			obj.transform.parent = hitParent.transform;
@@ -133,6 +142,14 @@ public class ClueGenerate : MonoBehaviour {
 			if (lureClues [i].type == "item") {
 				var tmp = obj.GetComponent<Item> ();
 				tmp.thisItem = lureClues [i];
+//			}
+			} else if (lureClues [i].type == "character") {
+				var tmp = obj.GetComponent<Character> ();
+				tmp.thisCharacter = lureClues [i];
+				if (i >= 2) {
+					var temp = lureClues [i].name;
+					t.lureName.Add (temp);
+				}
 			}
 			obj.SetActive (true);
 			obj.transform.parent = hitParent.transform;
@@ -149,6 +166,7 @@ public class ClueGenerate : MonoBehaviour {
 
 	string SelectScene(){
 		selectedSceneName = sceneNames [Random.Range (0, 3)];
+		selectedSceneName = sceneNames [1];
 		return selectedSceneName ;
 	}
 
@@ -239,58 +257,57 @@ public class ClueGenerate : MonoBehaviour {
 
 	void SelectRealClue(){
 		itemRealClueLists = items.ToList();
-		print ("items :"+itemRealClueLists.Count);
 		characterRealClueLists = characters.ToList();
-		print ("characters :"+characterRealClueLists.Count);
+		print ("All Real Characters : "+characterRealClueLists.Count + " | All Real Items : "+itemRealClueLists.Count);
 		selectedClues = new Clue[4];
 
 		for (int i = 0; i < 3; i++) {
 			var index = Random.Range (0, itemRealClueLists.Count);
 			selectedClues [i] = itemRealClueLists [index];
 //			selectedClues[i].model.SetActive(true);
-			print (selectedClues[i].name);
+			print ("Select : " + selectedClues[i].name + " as Real Clue.");
 			itemRealClueLists.RemoveAt(index);
 		}
 		items = itemRealClueLists.ToArray ();
-		print ("items :" + items.Length);
+		print ("Real Items : " + items.Length + " Remaining.");
 
 		for (int i = 0; i < 1; i++) {
 			var index = Random.Range(0, characterRealClueLists.Count);
 			selectedClues[i+3] = characterRealClueLists[index];
 //			selectedClues[i+2].model.SetActive(true);
-			print (selectedClues[i+3].name);
+			print ("Select : " + selectedClues[i+3].name + " as Goal.");
 			characterRealClueLists.RemoveAt(index);
 		}
 		characters = characterRealClueLists.ToArray ();
-		print ("characters :" + characters.Length);
+		print ("Real Characters : " + characters.Length + " Remaining.");
 	}
 
 	void SelectLureClue(){
 		itemLureClueLists =  cluesItemPool.ToList ();
-		print ("itemCluespool :"+itemLureClueLists.Count);
 		charLureClueLists =  cluesCharPool.ToList ();
-		print ("charCluespool :"+charLureClueLists.Count);
+		print ("All Fake Characters : "+charLureClueLists.Count + " | All Fake Items : "+itemLureClueLists.Count);
 		lureClues = new Clue[4];
 
 		for (int i = 0; i < 2; i++) {
 			var index = Random.Range(0, itemLureClueLists.Count);
 			lureClues[i] = itemLureClueLists[index];
 //			lureClues[i].model.SetActive(true);
-			print (lureClues[i].name);
+			print ("Select : " + lureClues[i].name + " as Fake Clue.");
 			itemLureClueLists.RemoveAt(index);
 		}
 		cluesItemPool = itemLureClueLists.ToArray ();
+		print ("Fake Items : "+ cluesItemPool.Length + " Remaining.");
 
 		for (int i = 0; i < 2; i++) {
 			var index = Random.Range(0, charLureClueLists.Count);
 			lureClues[i+2] = charLureClueLists[index];
 			//			lureClues[i].model.SetActive(true);
-			print (lureClues[i+2].name);
+			print ("Select : " + lureClues[i+2].name + " as Fake Character.");
 			charLureClueLists.RemoveAt(index);
 		}
 		cluesCharPool = charLureClueLists.ToArray ();
-		print ("Cluespool :"+ cluesItemPool.Length);
-		print ("lureClues :" + lureClues.Length);
+		print ("Fake Characters : "+ cluesCharPool.Length + " Remaining.");
+		print ("All Fake Items & Characters : " + lureClues.Length);
 	}
 
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------

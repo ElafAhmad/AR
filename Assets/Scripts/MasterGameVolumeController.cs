@@ -11,6 +11,8 @@ public class MasterGameVolumeController : MonoBehaviour {
 	public bool clickMute;
 	private int scenceIndex;
 	Temp t;
+	public AudioSource correctSound;
+	public AudioSource incorrectSound;
 
 	// Use this for initialization
 	void Start () {
@@ -19,6 +21,8 @@ public class MasterGameVolumeController : MonoBehaviour {
 		clickMute = t.clickMute;
 		clickSound.mute = !clickMute;
 		musicSound.mute = !musicMute;
+		correctSound.mute = !clickMute;
+		incorrectSound.mute = !clickMute;
 	}
 	
 	// Update is called once per frame
@@ -26,10 +30,20 @@ public class MasterGameVolumeController : MonoBehaviour {
 		t = FindObjectOfType<Temp> ();
 		clickSound.mute = !clickMute;
 		musicSound.mute = !musicMute;
+		correctSound.mute = !clickMute;
+		incorrectSound.mute = !clickMute;
 	}
 
 	public void PlayClickSound(){
 		clickSound.Play ();
+	}
+
+	public void PlayCorrectSound(){
+		correctSound.Play ();
+	}
+
+	public void PlayIncorrectSound(){
+		incorrectSound.Play ();
 	}
 
 	public void OnOffMusic(){
@@ -41,7 +55,8 @@ public class MasterGameVolumeController : MonoBehaviour {
 	public void OnOffEffect(){
 		clickMute = clickSound.mute;
 		clickSound.mute = !clickSound.mute;
-
+		correctSound.mute = !clickSound.mute;
+		incorrectSound.mute = !clickSound.mute;
 	}
 		
 }

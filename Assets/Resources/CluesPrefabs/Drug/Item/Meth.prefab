@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114419367129803896}
   - component: {fileID: 65856177555484708}
   m_Layer: 0
-  m_Name: iDrug2
+  m_Name: Meth
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -137,3 +137,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   render: {fileID: 0}
+  testRen: 0

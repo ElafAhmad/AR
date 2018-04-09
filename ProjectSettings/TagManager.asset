@@ -8,6 +8,11 @@ TagManager:
   - iMurder
   - iDrug
   - Item
+  - AnswerButton
+  - cRobbery
+  - cMurder
+  - cDrug
+  - Character
   layers:
   - Default
   - TransparentFX

@@ -10,6 +10,8 @@ public class Temp : MonoBehaviour {
 	public MasterVolumeController mVC;
 	public MasterGameVolumeController mGVC;
 	public Vector3[] cluePos;
+	public string goalName;
+	public List<string> lureName = new List<string> ();
 
 	// Use this for initialization
 	void Start () {
