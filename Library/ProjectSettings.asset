@@ -266,10 +266,10 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 0}
+      m_Icon: {fileID: 2800000, guid: 8555d6b0785befe4aa042cfc7e023aee, type: 3}
       m_Width: 128
       m_Height: 128
-      m_Kind: 44034
+      m_Kind: 0
   m_BuildTargetBatching: []
   m_BuildTargetGraphicsAPIs:
   - m_BuildTarget: AndroidPlayer
