@@ -48,6 +48,10 @@ public class ClueGenerate : MonoBehaviour {
 	public Vector3[] cluePos;
 	private Temp t;
 
+	public ScenceGenerator sG;
+	public List<Scene> sceneList = new List<Scene> ();
+	public Scene sceneInfo;
+
 	// Use this for initialization
 	void Awake(){
 		
@@ -55,6 +59,7 @@ public class ClueGenerate : MonoBehaviour {
 
 	void Start () {
 		cM = FindObjectOfType<ClueManager> ();
+		sG = FindObjectOfType<ScenceGenerator> ();
 		t = FindObjectOfType<Temp> ();
 
 		MurderItem = cM.MurderItemList.ToArray();
@@ -66,6 +71,7 @@ public class ClueGenerate : MonoBehaviour {
 
 		sceneName = SelectScene ();
 		print ("Select : " + sceneName + " Scene.");
+		SelectSceneFromSG ();
 		ConstructPool ();
 
 		SelectItemNCharacter();
@@ -118,6 +124,7 @@ public class ClueGenerate : MonoBehaviour {
 			} else if (selectedClues [i].type == "character") {
 				var tmp = obj.GetComponent<Character> ();
 				selectedClues [i].isReal = true;
+				selectedClues [i].info = sceneInfo.fake;
 				tmp.thisCharacter = selectedClues [i];
 				if (i == 3) {
 					t.goalName = selectedClues [i].name;
@@ -145,6 +152,11 @@ public class ClueGenerate : MonoBehaviour {
 //			}
 			} else if (lureClues [i].type == "character") {
 				var tmp = obj.GetComponent<Character> ();
+				if (i == 2) {
+					lureClues [i].info = sceneInfo.real1;
+				}else if(i == 3) {
+					lureClues [i].info = sceneInfo.real2;
+				}
 				tmp.thisCharacter = lureClues [i];
 				if (i >= 2) {
 					var temp = lureClues [i].name;
@@ -164,9 +176,25 @@ public class ClueGenerate : MonoBehaviour {
 		
 	}
 
+	void SelectSceneFromSG(){
+		if (sceneName == "Robbery") {
+			sceneList = sG.robberySceneList;
+			int i = Random.Range (0, sceneList.Count);
+			sceneInfo = sceneList [i];
+		} else if (sceneName == "Murder") {
+			sceneList = sG.murderSceneList;
+			int i = Random.Range (0, sceneList.Count);
+			sceneInfo = sceneList [i];
+		} else if (sceneName == "Drug") {
+			sceneList = sG.drugSceneList;
+			int i = Random.Range (0, sceneList.Count);
+			sceneInfo = sceneList [i];
+		}
+	}
+
 	string SelectScene(){
 		selectedSceneName = sceneNames [Random.Range (0, 3)];
-		selectedSceneName = sceneNames [1];
+		selectedSceneName = sceneNames [0];
 		return selectedSceneName ;
 	}
 

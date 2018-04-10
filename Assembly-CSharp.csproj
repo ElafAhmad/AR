@@ -70,10 +70,13 @@
      <Compile Include="Assets\Scripts\MasterVolumeController.cs" />
      <Compile Include="Assets\Scripts\PickUpObject.cs" />
      <Compile Include="Assets\Scripts\RotatePreview.cs" />
+     <Compile Include="Assets\Scripts\ScenceGenerator.cs" />
+     <Compile Include="Assets\Scripts\Scene.cs" />
      <Compile Include="Assets\Scripts\SettingClickButtonController.cs" />
      <Compile Include="Assets\Scripts\SettingMusicButtonController.cs" />
      <Compile Include="Assets\Scripts\ShowItemDetail.cs" />
      <Compile Include="Assets\Scripts\ShowItemPic.cs" />
+     <Compile Include="Assets\Scripts\ShowNPCDetail.cs" />
      <Compile Include="Assets\Scripts\ShowRotateReview.cs" />
      <Compile Include="Assets\Scripts\Temp.cs" />
      <Compile Include="Assets\UnityARKitPlugin\ARKitRemote\ARKitFaceTrackingRemoteConnection.cs" />
@@ -154,6 +157,7 @@
      <None Include="Assets\Resources\CluesPrefabs\Drug\Character\detail.txt" />
      <None Include="Assets\UnityARKitPlugin\Examples\Common\Shaders\MobileOcclusion.shader" />
      <None Include="Assets\Components\Simple UI\Fonts\OFL.txt" />
+     <None Include="Assets\Resources\CluesPrefabs\Robbery\scene.txt" />
      <None Include="Assets\Resources\CluesPrefabs\Murder\Item\detail.txt" />
      <None Include="Assets\UnityARKitPlugin\ARKitRemote\ARKITREMOTE.txt" />
      <None Include="Assets\Resources\CluesPrefabs\Robbery\Character\detail.txt" />

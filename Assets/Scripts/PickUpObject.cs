@@ -18,6 +18,7 @@ public class PickUpObject : MonoBehaviour {
 	public GameObject targer;
 
 	public GameObject talkPanel;
+	public GameObject npcPanel;
 
 	// Use this for initialization
 	void Start () {
@@ -42,8 +43,27 @@ public class PickUpObject : MonoBehaviour {
 		}
 	}
 
+	public void Talk(){
+		isTalk = true;
+		isPickup = true;
+		talkPanel.SetActive (false);
+		npcPanel.SetActive (true);
+		jornalButtonPanel.SetActive (false);
+		hintButtonPanel.SetActive (false);
+	}
+
+	public void CloseTalk(){
+		isTalk = false;
+		isPickup = false;
+		//		pickUpPanel.SetActive (true);
+		talkPanel.SetActive (false);
+		jornalButtonPanel.SetActive (true);
+		hintButtonPanel.SetActive (true);
+	}
+
 	public void PickedUp(){
 		isPickup = true;
+		isTalk = true;
 		pickUpPanel.SetActive (false);
 		itemPanel.SetActive (true);
 		jornalButtonPanel.SetActive (false);
@@ -52,6 +72,7 @@ public class PickUpObject : MonoBehaviour {
 
 	public void ClosePickup(){
 		isPickup = false;
+		isTalk = false;
 //		pickUpPanel.SetActive (true);
 		itemPanel.SetActive (false);
 		jornalButtonPanel.SetActive (true);
@@ -78,6 +99,7 @@ public class PickUpObject : MonoBehaviour {
 		jornalButtonPanel.SetActive (false);
 		hintButtonPanel.SetActive (false);
 		itemPreviewPanel.SetActive (false);
+		npcPanel.SetActive (false);
 	}
 
 	public void CloseSetting(){
@@ -85,5 +107,6 @@ public class PickUpObject : MonoBehaviour {
 		settingPanel.SetActive (false);
 		CloseJornal ();
 		ClosePickup ();
+		CloseTalk ();
 	}
 }
