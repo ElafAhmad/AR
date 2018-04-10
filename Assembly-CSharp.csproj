@@ -68,6 +68,7 @@
      <Compile Include="Assets\Scripts\LoadSceneOnClick.cs" />
      <Compile Include="Assets\Scripts\MasterGameVolumeController.cs" />
      <Compile Include="Assets\Scripts\MasterVolumeController.cs" />
+     <Compile Include="Assets\Scripts\NPCinfo.cs" />
      <Compile Include="Assets\Scripts\PickUpObject.cs" />
      <Compile Include="Assets\Scripts\RotatePreview.cs" />
      <Compile Include="Assets\Scripts\ScenceGenerator.cs" />

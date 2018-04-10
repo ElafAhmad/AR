@@ -28,7 +28,7 @@ public class Jornal : MonoBehaviour {
 	}
 
 	public void ReceiveNewClue(Clue newClue){
-		if (newClue.isReal) {
+		if (newClue.isReal && (newClue.type == "item")) {
 			Info preset = new Info ();
 			preset.name = newClue.name;
 			preset.info = newClue.info + " " + t.goalName + ".";
@@ -37,10 +37,10 @@ public class Jornal : MonoBehaviour {
 			Debug.Log (lastIndex.name + " : " + lastIndex.info);
 			int index = lists.Count - 1;
 			SetNewHeight (index);
-			ShowNewInfo (preset,index);
+			ShowNewInfo (preset, index);
 			notifyJornalButton ();
 
-		} else if (!newClue.isReal) {
+		} else if (!newClue.isReal && (newClue.type == "item")) {
 			int i = Random.Range (0, 2);
 			string lurename = t.lureName [i];
 			Info preset = new Info ();
@@ -51,7 +51,30 @@ public class Jornal : MonoBehaviour {
 			Debug.Log (lastIndex.name + " : " + lastIndex.info);
 			int index = lists.Count - 1;
 			SetNewHeight (index);
-			ShowNewInfo (preset,index);
+			ShowNewInfo (preset, index);
+			notifyJornalButton ();
+		} else if (newClue.isReal && (newClue.type == "character")) {
+			Info preset = new Info ();
+			preset.name = newClue.name;
+			preset.info = newClue.info;
+			lists.Add (preset);
+			var lastIndex = lists [lists.Count - 1];
+			Debug.Log (lastIndex.name + " : " + lastIndex.info);
+			int index = lists.Count - 1;
+			SetNewHeight (index);
+			ShowNewInfo (preset, index);
+			notifyJornalButton ();
+
+		} else if (!newClue.isReal && (newClue.type == "character")) {
+			Info preset = new Info ();
+			preset.name = newClue.name;
+			preset.info = newClue.info;
+			lists.Add (preset);
+			var lastIndex = lists [lists.Count - 1];
+			Debug.Log (lastIndex.name + " : " + lastIndex.info);
+			int index = lists.Count - 1;
+			SetNewHeight (index);
+			ShowNewInfo (preset, index);
 			notifyJornalButton ();
 		}
 	}
@@ -92,7 +115,6 @@ public class Jornal : MonoBehaviour {
 		RectTransform rt = scroll.GetComponent <RectTransform> ();
 		if (index == 3) {
 			Vector3 curPos = rt.transform.localPosition;
-			print (curPos);
 			rt.sizeDelta = new Vector2 (1560,900);
 			Vector3 distance = new Vector3 (0f, -6.739121133028f, 0f);
 			rt.Translate (distance);
