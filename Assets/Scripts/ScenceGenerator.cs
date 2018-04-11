@@ -11,8 +11,8 @@ public class ScenceGenerator : MonoBehaviour {
 	// Use this for initialization
 	void Awake () {
 		MakeSceneList ("Robbery", robberySceneList);
-//		MakeSceneList ("Murder", murderSceneList);
-//		MakeSceneList ("Drug", drugSceneList);
+		MakeSceneList ("Murder", murderSceneList);
+		MakeSceneList ("Drug", drugSceneList);
 		
 	}
 
@@ -28,30 +28,28 @@ public class ScenceGenerator : MonoBehaviour {
 		for (int i = 0; i < textAsset.Length;){
 			Scene preset = new Scene();
 			preset.name = textAsset[i++];
-			//			Debug.Log(preset.name+" : "+preset.name.Length);
-			//			Debug.Log(preset.name[0]);
-			//			Debug.Log(preset.name[1]);
-			//			Debug.Log(preset.name[2]);
+//						Debug.Log(preset.name+" : "+preset.name.Length);
+//						Debug.Log(preset.name);
 			preset.background = textAsset[i++];
-			//			Debug.Log(preset.background);
+//						Debug.Log(preset.background);
 			preset.real1 = textAsset[i++];
-			//			Debug.Log(preset.real1);
+//						Debug.Log(preset.real1);
 			preset.real2 = textAsset[i++];
-			//			Debug.Log(preset.real2);
+//						Debug.Log(preset.real2);
 			preset.fake = textAsset[i++];
-			//			Debug.Log(preset.fake);
+//						Debug.Log(preset.fake);
 			preset.itemName1 = textAsset[i++];
-			//			Debug.Log(preset.itemName1);
+//						Debug.Log(preset.itemName1);
 			preset.itemDescription1 = textAsset[i++];
-			//			Debug.Log(preset.itemDescription1);
+//						Debug.Log(preset.itemDescription1);
 			preset.itemName2 = textAsset[i++];
-			//			Debug.Log(preset.itemName2);
+//						Debug.Log(preset.itemName2);
 			preset.itemDescription2 = textAsset[i++];
-			//			Debug.Log(preset.itemDescription2);
+//						Debug.Log(preset.itemDescription2);
 			preset.itemName3 = textAsset[i++];
-			//			Debug.Log(preset.itemName3);
+//						Debug.Log(preset.itemName3);
 			preset.itemDescription3 = textAsset[i++];
-			//			Debug.Log(preset.itemDescription3);
+//						Debug.Log(preset.itemDescription3);
 			list.Add (preset);
 		}
 	}
