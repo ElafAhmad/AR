@@ -3147,7 +3147,7 @@ GameObject:
   - component: {fileID: 1765167718}
   m_Layer: 0
   m_Name: Temp
-  m_TagString: Untagged
+  m_TagString: Temp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3180,6 +3180,9 @@ MonoBehaviour:
   clickMute: 0
   mVC: {fileID: 0}
   mGVC: {fileID: 0}
+  cluePos: []
+  goalName: 
+  lureName: []
 --- !u!1 &1939347377
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,6 +13,7 @@ TagManager:
   - cMurder
   - cDrug
   - Character
+  - Temp
   layers:
   - Default
   - TransparentFX

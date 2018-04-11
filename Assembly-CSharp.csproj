@@ -70,6 +70,7 @@
      <Compile Include="Assets\Scripts\MasterVolumeController.cs" />
      <Compile Include="Assets\Scripts\NPCinfo.cs" />
      <Compile Include="Assets\Scripts\PickUpObject.cs" />
+     <Compile Include="Assets\Scripts\Result.cs" />
      <Compile Include="Assets\Scripts\RotatePreview.cs" />
      <Compile Include="Assets\Scripts\ScenceGenerator.cs" />
      <Compile Include="Assets\Scripts\Scene.cs" />
