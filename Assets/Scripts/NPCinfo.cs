@@ -9,7 +9,8 @@ public class NPCinfo : MonoBehaviour {
 	public Button btn2;
 	public Button btn3;
 	public List<string> criminalName = new List<string> ();
-	Temp t;
+	private List<string> tempName = new List<string> ();
+	public Temp t;
 
 	// Use this for initialization
 	void Start () {

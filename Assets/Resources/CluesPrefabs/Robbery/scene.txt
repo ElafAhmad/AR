@@ -1,5 +1,11 @@
 The Apartment
-Witness said that someone break into a room of the apartment, many things are missing include bag filled with $100k. Find out the truth and who is broke into the apartment.
-There is no door or windows breaking sound. I heard a loud rifling. I also heard someone footstep in hallway after that sound, it kind of sneaking footstep.
-I'm the owner of that bag, It's Friday, I'm usually hang out with my friend. I think it should be an insider because he broke into my room while I'm away.
-While I reading a mag in my room, I heard a tinkering sound so I open the door to find the source. I saw someone run to the back door.
+Witnesses say that someone broke into a room of the apartment. Many things are missing including a bag filled with $100k. Find out the truth and who broke into the apartment.
+There were no sounds of doors or windows breaking. I heard some loud rifling noises. I also heard someone footsteps in hallway after, kind of sneaking footstep.
+I'm the owner of that bag. It was Friday, I was hanging out with my friend. I think it should be someone that live here because he broke into my room while I was away.
+While I was reading a magazine inside my room. I heard a tinkering sound so I opened the door to find the source. I saw someone run to the back door quickly.
+Bag
+testBag of victim.
+Fooprint
+testFootprint of someone.
+CCTV Footage
+testFootage from CCTV which may capture the criminal.

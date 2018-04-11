@@ -40,6 +40,18 @@ public class ScenceGenerator : MonoBehaviour {
 			//			Debug.Log(preset.real2);
 			preset.fake = textAsset[i++];
 			//			Debug.Log(preset.fake);
+			preset.itemName1 = textAsset[i++];
+			//			Debug.Log(preset.itemName1);
+			preset.itemDescription1 = textAsset[i++];
+			//			Debug.Log(preset.itemDescription1);
+			preset.itemName2 = textAsset[i++];
+			//			Debug.Log(preset.itemName2);
+			preset.itemDescription2 = textAsset[i++];
+			//			Debug.Log(preset.itemDescription2);
+			preset.itemName3 = textAsset[i++];
+			//			Debug.Log(preset.itemName3);
+			preset.itemDescription3 = textAsset[i++];
+			//			Debug.Log(preset.itemDescription3);
 			list.Add (preset);
 		}
 	}

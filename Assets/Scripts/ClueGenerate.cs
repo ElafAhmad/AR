@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using System.Linq;
 
 public class ClueGenerate : MonoBehaviour {
@@ -52,6 +53,9 @@ public class ClueGenerate : MonoBehaviour {
 	public List<Scene> sceneList = new List<Scene> ();
 	public Scene sceneInfo;
 
+	public Text sceneIntro;
+	public Text nameForScene;
+
 	// Use this for initialization
 	void Awake(){
 		
@@ -72,6 +76,7 @@ public class ClueGenerate : MonoBehaviour {
 		sceneName = SelectScene ();
 		print ("Select : " + sceneName + " Scene.");
 		SelectSceneFromSG ();
+		ShowIntro ();
 		ConstructPool ();
 
 		SelectItemNCharacter();
@@ -190,6 +195,11 @@ public class ClueGenerate : MonoBehaviour {
 			int i = Random.Range (0, sceneList.Count);
 			sceneInfo = sceneList [i];
 		}
+	}
+
+	void ShowIntro(){
+		nameForScene.text = sceneInfo.name;
+		sceneIntro.text = "\t" + sceneInfo.background;
 	}
 
 	string SelectScene(){

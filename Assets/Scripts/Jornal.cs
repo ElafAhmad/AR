@@ -108,6 +108,7 @@ public class Jornal : MonoBehaviour {
 		name.text = newInfo.name;
 		Transform child = obj.transform.Find ("Panel");
 		Text info = child.GetComponentInChildren<Text> ();
+		info.fontSize = 35;
 		info.text = newInfo.info;
 	}
 
