@@ -2,7 +2,7 @@ Marijuana
 item
 A Barrier bags filled with Marijuana.
 Found a fingerprint of
-Coke
+Cocaine
 item
 A Pack of Cocaine.
 Found a fingerprint of
@@ -17,4 +17,4 @@ Found the signs of use by
 Meth
 item
 A Meth in medicine bottles.
-the label is named
+There is a traces of

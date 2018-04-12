@@ -204,7 +204,7 @@ public class ClueGenerate : MonoBehaviour {
 
 	string SelectScene(){
 		selectedSceneName = sceneNames [Random.Range (0, 3)];
-		selectedSceneName = sceneNames [2];
+		selectedSceneName = sceneNames [1];
 		return selectedSceneName ;
 	}
 
@@ -280,15 +280,18 @@ public class ClueGenerate : MonoBehaviour {
 		if (sceneName == "Robbery") {
 			items = RobberyItem;
 			characters = RobberyCharacter;
-			SelectRealClue ();
+//			SelectRealClue ();
+			SelectRealClueV2 ();
 		} else if (sceneName == "Murder") {
 			items = MurderItem;
 			characters = MurderCharacter;
-			SelectRealClue ();
+//			SelectRealClue ();
+			SelectRealClueV2 ();
 		} else if (sceneName == "Drug") {
 			items = DrugItem;
 			characters = DrugCharacter;
-			SelectRealClue ();
+//			SelectRealClue ();
+			SelectRealClueV2 ();
 		}
 
 	}
@@ -346,6 +349,51 @@ public class ClueGenerate : MonoBehaviour {
 		cluesCharPool = charLureClueLists.ToArray ();
 		print ("Fake Characters : "+ cluesCharPool.Length + " Remaining.");
 		print ("All Fake Items & Characters : " + lureClues.Length);
+	}
+
+	private List<Clue> selectedClueslist = new List<Clue> ();
+	private List<Clue> tempItemClueslist = new List<Clue> ();
+
+	void SelectRealClueV2(){
+		itemRealClueLists = items.ToList ();
+		characterRealClueLists = characters.ToList();
+		print ("All Real Characters : "+characterRealClueLists.Count + " | All Real Items : "+itemRealClueLists.Count);
+
+		foreach (Clue tempitem in itemRealClueLists) {
+			if (tempitem.name == sceneInfo.itemName1) {
+				tempitem.description = sceneInfo.itemDescription1;
+				selectedClueslist.Add (tempitem);
+				print ("Select : " + tempitem.name + " as Real Clue.");
+			} else if (tempitem.name == sceneInfo.itemName2) {
+				tempitem.description = sceneInfo.itemDescription2;
+				selectedClueslist.Add (tempitem);
+				print ("Select : " + tempitem.name + " as Real Clue.");
+			} else if (tempitem.name == sceneInfo.itemName3) {
+				tempitem.description = sceneInfo.itemDescription3;
+				selectedClueslist.Add (tempitem);
+				print ("Select : " + tempitem.name + " as Real Clue.");
+			} else {
+				tempItemClueslist.Add (tempitem);
+			}
+		}
+
+//		print (tempItemClueslist.Count);
+//		for (int i = 0; i < tempItemClueslist.Count; i++) {
+//			print (tempItemClueslist [i].name);
+//		}
+
+		items = tempItemClueslist.ToArray ();
+		print ("Real Items : " + items.Length + " Remaining.");
+
+		for (int i = 0; i < 1; i++) {
+			var index = Random.Range (0, characterRealClueLists.Count);
+			selectedClueslist.Add(characterRealClueLists [index]);
+			print ("Select : " + selectedClueslist [i + 3].name + " as Goal.");
+			characterRealClueLists.RemoveAt (index);
+		}
+		characters = characterRealClueLists.ToArray ();
+		selectedClues = selectedClueslist.ToArray ();
+		print ("Real Characters : " + characters.Length + " Remaining.");
 	}
 
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------

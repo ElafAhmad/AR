@@ -1,10 +1,10 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ClueGenerate.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Resources\CluesPrefabs\Murder\scene.txt">
     <Files>
       <File FileName="Assets\Scripts\Clue.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\ClueManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\ClueGenerate.cs" Line="300" Column="31" />
+      <File FileName="Assets\Scripts\ClueGenerate.cs" Line="207" Column="36" />
       <File FileName="Assets\Scripts\Scene.cs" Line="26" Column="27" />
       <File FileName="Assets\Scripts\ScenceGenerator.cs" Line="37" Column="34" />
       <File FileName="Assets\Scripts\Temp.cs" Line="1" Column="1" />
@@ -27,9 +27,9 @@
       <File FileName="Assets\Scripts\Jornal.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\ShowNPCDetail.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\NPCinfo.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Result.cs" Line="33" Column="63" />
+      <File FileName="Assets\Scripts\Result.cs" Line="1" Column="1" />
       <File FileName="Assets\Resources\CluesPrefabs\Murder\scene.txt" Line="22" Column="60" />
-      <File FileName="Assets\Resources\CluesPrefabs\Drug\scene.txt" Line="16" Column="60" />
+      <File FileName="Assets\Resources\CluesPrefabs\Murder\Item\detail.txt" Line="14" Column="5" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
