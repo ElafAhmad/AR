@@ -204,7 +204,7 @@ public class ClueGenerate : MonoBehaviour {
 
 	string SelectScene(){
 		selectedSceneName = sceneNames [Random.Range (0, 3)];
-		selectedSceneName = sceneNames [1];
+//		selectedSceneName = sceneNames [0];
 		return selectedSceneName ;
 	}
 

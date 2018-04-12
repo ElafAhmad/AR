@@ -4,8 +4,8 @@ There were no sounds of doors or windows breaking. I heard some loud rifling noi
 I'm the owner of that bag. It was Friday, I was hanging out with my friend. I think it should be someone that live here because he broke into my room while I was away.
 While I was reading a magazine inside my room. I heard a tinkering sound so I opened the door to find the source. I saw someone run to the back door quickly.
 Bag
-testBag of victim.
-Fooprint
-testFootprint of someone.
+Bag of victim.
+Footprint
+Footprint of someone.
 CCTV Footage
-testFootage from CCTV which may capture the criminal.
+Footage from CCTV which may capture the criminal.
