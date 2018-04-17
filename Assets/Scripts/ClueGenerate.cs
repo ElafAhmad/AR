@@ -121,6 +121,7 @@ public class ClueGenerate : MonoBehaviour {
 			Vector3 posTemp = new Vector3 (posX, 2f, posZ);
 			cluePosLists.Add (posTemp);
 			GameObject obj = Instantiate (selectedClues [i].model, posTemp, Quaternion.identity);
+			obj.transform.localScale = 	new Vector3 (0.1f, 0.1f, 0.1f);
 			if (selectedClues [i].type == "item") {
 				var tmp = obj.GetComponent<Item> ();
 				selectedClues[i].isReal = true;
@@ -151,6 +152,7 @@ public class ClueGenerate : MonoBehaviour {
 			Vector3 posTemp = new Vector3 (posX, 2f, posZ);
 			cluePosLists.Add (posTemp);
 			GameObject obj = Instantiate (lureClues [i].model, posTemp, Quaternion.identity);
+			obj.transform.localScale = 	new Vector3 (0.1f, 0.1f, 0.1f);
 			if (lureClues [i].type == "item") {
 				var tmp = obj.GetComponent<Item> ();
 				tmp.thisItem = lureClues [i];

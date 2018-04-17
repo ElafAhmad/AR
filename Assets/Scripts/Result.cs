@@ -16,6 +16,7 @@ public class Result : MonoBehaviour {
 	private Image resultImage;
 	public Sprite trueSprite;
 	public Sprite falseSprite;
+	public MasterGameVolumeController mGVC;
 
 	// Use this for initialization
 	void Start () {
@@ -33,6 +34,7 @@ public class Result : MonoBehaviour {
 				resultImage = imagePanel.GetComponentInChildren<Image> ();
 				resultImage.sprite = trueSprite;
 				resultImage.color = new Color32 (143, 235, 22, 255);
+				mGVC.PlayCorrectSound ();
 				Invoke ("NewGame", 3.0f);
 			} else {
 				resultPanel.SetActive (true);
@@ -40,6 +42,8 @@ public class Result : MonoBehaviour {
 				resultImage = imagePanel.GetComponentInChildren<Image> ();
 				resultImage.sprite = falseSprite;
 				resultImage.color = new Color32 (228, 55, 30, 255);
+				mGVC.PlayIncorrectSound ();
+				Invoke ("NewGame", 3.0f);
 			}
 		} else if (j.lists.Count == 0) {
 			resultPanel.SetActive (true);
@@ -47,6 +51,7 @@ public class Result : MonoBehaviour {
 			resultImage = imagePanel.GetComponentInChildren<Image> ();
 			resultImage.sprite = falseSprite;
 			resultImage.color = new Color32 (228, 55, 30, 255);
+			mGVC.PlayIncorrectSound ();
 		}
 	}
 

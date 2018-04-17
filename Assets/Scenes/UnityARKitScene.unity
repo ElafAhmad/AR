@@ -4446,7 +4446,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4023412880410692, guid: 696855730620a483c9ae4c242e312b28, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4023412880410692, guid: 696855730620a483c9ae4c242e312b28, type: 2}
       propertyPath: m_LocalScale.x
@@ -7120,78 +7120,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 953292785}
---- !u!1001 &955283542
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1286139108}
-    m_Modifications:
-    - target: {fileID: 4215423204010716, guid: 694c77a13dedb08458257354e522719b, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0.00030517578
-      objectReference: {fileID: 0}
-    - target: {fileID: 4215423204010716, guid: 694c77a13dedb08458257354e522719b, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 2.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 4215423204010716, guid: 694c77a13dedb08458257354e522719b, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4215423204010716, guid: 694c77a13dedb08458257354e522719b, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4215423204010716, guid: 694c77a13dedb08458257354e522719b, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4215423204010716, guid: 694c77a13dedb08458257354e522719b, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4215423204010716, guid: 694c77a13dedb08458257354e522719b, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4215423204010716, guid: 694c77a13dedb08458257354e522719b, type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4215423204010716, guid: 694c77a13dedb08458257354e522719b, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4215423204010716, guid: 694c77a13dedb08458257354e522719b, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4215423204010716, guid: 694c77a13dedb08458257354e522719b, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1400248014655782, guid: 694c77a13dedb08458257354e522719b, type: 2}
-      propertyPath: m_TagString
-      value: Item
-      objectReference: {fileID: 0}
-    - target: {fileID: 1400248014655782, guid: 694c77a13dedb08458257354e522719b, type: 2}
-      propertyPath: m_Name
-      value: CCTV Footage (test)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1400248014655782, guid: 694c77a13dedb08458257354e522719b, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 0}
-  m_ParentPrefab: {fileID: 100100000, guid: 694c77a13dedb08458257354e522719b, type: 2}
-  m_IsPrefabParent: 0
---- !u!4 &955283543 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4215423204010716, guid: 694c77a13dedb08458257354e522719b,
-    type: 2}
-  m_PrefabInternal: {fileID: 955283542}
 --- !u!1 &962473974
 GameObject:
   m_ObjectHideFlags: 0
@@ -9414,7 +9342,6 @@ Transform:
   m_LocalPosition: {x: 0, y: -0, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children:
-  - {fileID: 955283543}
   - {fileID: 574526938}
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -11155,6 +11082,7 @@ MonoBehaviour:
   imagePanel: {fileID: 1796633848}
   trueSprite: {fileID: 21300000, guid: 88924534b9ea345778719b733ed99479, type: 3}
   falseSprite: {fileID: 21300000, guid: d634d038ef5454d0daa664d6d2de6cda, type: 3}
+  mGVC: {fileID: 1888987957}
 --- !u!4 &1604431425
 Transform:
   m_ObjectHideFlags: 0

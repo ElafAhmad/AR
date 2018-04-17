@@ -27,7 +27,7 @@ public class PickUpObject : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		RaycastHit hit;
-		if (Physics.Raycast (cam.transform.position, cam.transform.forward, out hit, 0.75f)) {
+		if (Physics.Raycast (cam.transform.position, cam.transform.forward, out hit, 0.50f)) {
 			print ("HIT");
 			Debug.Log (hit.transform.name);
 			if (hit.transform.tag == "Item" && !isPickup) {
