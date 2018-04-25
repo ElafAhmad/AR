@@ -56,10 +56,7 @@ public class ClueGenerate : MonoBehaviour {
 	public Text sceneIntro;
 	public Text nameForScene;
 
-	// Use this for initialization
-	void Awake(){
-		
-	}
+	public GameObject cam;
 
 	void Start () {
 		cM = FindObjectOfType<ClueManager> ();
@@ -128,6 +125,8 @@ public class ClueGenerate : MonoBehaviour {
 				tmp.thisItem = selectedClues [i];
 //			}
 			} else if (selectedClues [i].type == "character") {
+				Vector3 pos = new Vector3 (cam.transform.position.x, obj.transform.position.y, cam.transform.position.z);
+				obj.transform.LookAt (pos);
 				var tmp = obj.GetComponent<Character> ();
 				selectedClues [i].isReal = true;
 				selectedClues [i].info = sceneInfo.fake;
@@ -158,6 +157,8 @@ public class ClueGenerate : MonoBehaviour {
 				tmp.thisItem = lureClues [i];
 //			}
 			} else if (lureClues [i].type == "character") {
+				Vector3 pos = new Vector3 (cam.transform.position.x, obj.transform.position.y, cam.transform.position.z);
+				obj.transform.LookAt (pos);
 				var tmp = obj.GetComponent<Character> ();
 				if (i == 2) {
 					lureClues [i].info = sceneInfo.real1;

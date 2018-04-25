@@ -1,72 +1,18 @@
 fileFormatVersion: 2
-guid: f0ff1fb5935331e44870b73ea7915357
-timeCreated: 1519137186
+guid: f5422e45bbe53364ebbf3fdaade1b5ac
+timeCreated: 1524650350
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: Group10
-    100002: Group25
-    100004: Group30
-    100006: Group35
-    100008: Group40
-    100010: Group45
-    100012: Group5
-    100014: Group50
-    100016: Group55
-    100018: //RootNode
-    100020: ZBrush_defualt_group
-    400000: Group10
-    400002: Group25
-    400004: Group30
-    400006: Group35
-    400008: Group40
-    400010: Group45
-    400012: Group5
-    400014: Group50
-    400016: Group55
-    400018: //RootNode
-    400020: ZBrush_defualt_group
-    2100000: Group10Mat
-    2100002: Group25Mat
-    2100004: Group30Mat
-    2100006: Group35Mat
-    2100008: Group40Mat
-    2100010: Group45Mat
-    2100012: Group5Mat
-    2100014: Group50Mat
-    2100016: Group55Mat
-    2100018: ZBrush_defualt_groupMat
-    2300000: Group10
-    2300002: Group25
-    2300004: Group30
-    2300006: Group35
-    2300008: Group40
-    2300010: Group45
-    2300012: Group5
-    2300014: Group50
-    2300016: Group55
-    2300018: ZBrush_defualt_group
-    3300000: Group10
-    3300002: Group25
-    3300004: Group30
-    3300006: Group35
-    3300008: Group40
-    3300010: Group45
-    3300012: Group5
-    3300014: Group50
-    3300016: Group55
-    3300018: ZBrush_defualt_group
-    4300000: Group10
-    4300002: Group25
-    4300004: Group30
-    4300006: Group35
-    4300008: Group40
-    4300010: Group45
-    4300012: Group5
-    4300014: Group50
-    4300016: Group55
-    4300018: ZBrush_defualt_group
+    100000: //RootNode
+    100002: ZBrushPolyMesh3D
+    400000: //RootNode
+    400002: ZBrushPolyMesh3D
+    2100000: ZBrushPolyMesh3DMat
+    2300000: ZBrushPolyMesh3D
+    3300000: ZBrushPolyMesh3D
+    4300000: ZBrushPolyMesh3D
   externalObjects: {}
   materials:
     importMaterials: 1

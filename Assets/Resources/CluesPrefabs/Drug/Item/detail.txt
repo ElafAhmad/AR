@@ -4,7 +4,7 @@ A Barrier bags filled with Marijuana.
 Found a fingerprint of
 Cocaine
 item
-A Pack of Cocaine.
+A Pile of Cocaine.
 Found a fingerprint of
 Syringe
 item
@@ -16,5 +16,5 @@ A bong with ice cubes inside.
 Found the signs of use by
 Meth
 item
-A Meth in medicine bottles.
+A Meth in medicine bag.
 There is a traces of
