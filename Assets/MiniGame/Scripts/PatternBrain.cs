@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PatternBrain : MonoBehaviour
 {
@@ -14,19 +15,52 @@ public class PatternBrain : MonoBehaviour
     public string guess = "";
     public int cubeNumber = 0;
 
-    int clickNumber = 0;
+    public int clickNumber = 0;
+
+	public bool isCorrect;
+
+	public Image correct;
+	public Image wrong;
+	public GameObject miniGamePanel;
+	public GameObject itemPic_Panel;
+	public GameObject checkMiniGame;
+	public Jornal jornal;
+	public MasterGameVolumeController mGVC;
 
     void Start()
     {
-         foreach (GameObject buttonObj in GameObject.FindGameObjectsWithTag("ColorButton"))   // Finding all buttons
-        {
-            buttons.Add(buttonObj);
-        }
-        DisableItems();
-        FindCubes();
-        CubesInPattern();
-		GlowCubes();
+//         foreach (GameObject buttonObj in GameObject.FindGameObjectsWithTag("ColorButton"))   // Finding all buttons
+//        {
+//            buttons.Add(buttonObj);
+//        }
+//        DisableItems();
+//        FindCubes();
+//        CubesInPattern();
+//		GlowCubes();
     }
+
+	public void MiniGameStart(){
+		guess = "";
+		answer = "";
+		cubeNumber = 0;
+		clickNumber = 0;
+		waiting = false;
+		allCubes.Clear ();
+		buttons.Clear ();
+		patternCubes.Clear ();
+		answerCubes.Clear ();
+		FindButns ();
+		DisableItems();
+		FindCubes();
+		CubesInPattern();
+		GlowCubes();
+	}
+
+	void FindButns(){
+		foreach (GameObject buttonObj in GameObject.FindGameObjectsWithTag("ColorButton")) {   // Finding all buttons
+			buttons.Add (buttonObj);
+		}
+	}
 
     // Find all cubes in the scene
      void FindCubes()
@@ -114,22 +148,64 @@ public class PatternBrain : MonoBehaviour
             answerCubes.Add(cube);
             Debug.Log("Max Cubes Reached");
             DisableItems();
-            CheckAnswer();
+            CheckAnswerV2();
+			CheckAnswer ();
+			ActivateButtons ();
         }
         answerCubes.Add(cube);
     }
 
+	void CheckAnswerV2()
+	{
+		isCorrect = true;
+		for(int i=0; i < 4; i++ )
+		{
+			if (answerCubes[i].name != patternCubes[i].name)
+			{
+				isCorrect = false;
+				break;
+			}
+		}
+	}
+
+
     void CheckAnswer()
     {
-        bool isCorrect = true;
-        for(int i=0; i < 4; i++ )
-        {
-            if (answerCubes[i].name != patternCubes[i].name)
-            {
-                isCorrect = false;
-                break;
-            }
-        }
+		GameObject gO = GameObject.Find ("Main Camera");
+		PickUpObject pUO = gO.GetComponent<PickUpObject> ();
+		Item item = pUO.targer.GetComponent<Item> ();
+
+		if (isCorrect == true) {
+			item.thisItem.isMinigame = true;
+			correct.gameObject.SetActive (true);
+			mGVC.PlayCorrectSound ();
+			Invoke ("Correct", 2.5f);
+			jornal.ReceiveNewClue (item.thisItem);
+		} else {
+			wrong.gameObject.SetActive (true);
+			mGVC.PlayIncorrectSound ();
+			Invoke ("Wrong", 2.5f);
+		}
         Debug.Log("Your guess is " + isCorrect);
     }
+
+	void Correct(){
+		correct.gameObject.SetActive (false);
+		miniGamePanel.SetActive (false);
+		foreach (Transform child in itemPic_Panel.transform) {
+			child.gameObject.SetActive (true);
+		}
+		CheckIsMiniGame check = checkMiniGame.GetComponent<CheckIsMiniGame> ();
+		check.CheckMiniGame ();
+	}
+
+	void Wrong(){
+		wrong.gameObject.SetActive (false);
+		miniGamePanel.SetActive (false);
+		foreach (Transform child in itemPic_Panel.transform) {
+			child.gameObject.SetActive (true);
+		}
+		CheckIsMiniGame check = checkMiniGame.GetComponent<CheckIsMiniGame> ();
+		check.CheckMiniGame ();
+	}
 }

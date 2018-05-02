@@ -137,14 +137,14 @@ public class MathBrain : MonoBehaviour {
 			btn.GetComponent<Image>().color = Color.green;
 			correct.gameObject.SetActive (true);
 			mGVC.PlayCorrectSound ();
-			Invoke ("Correct", 1.0f);
+			Invoke ("Correct", 2.5f);
 			jornal.ReceiveNewClue (item.thisItem);
 			Debug.Log("Correct Answer");
 		} else {
 			btn.GetComponent<Image>().color = Color.red;
 			wrong.gameObject.SetActive (true);
 			mGVC.PlayIncorrectSound ();
-			Invoke ("Wrong", 1.0f);
+			Invoke ("Wrong", 2.5f);
 		}
 	}
 

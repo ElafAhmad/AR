@@ -74,6 +74,7 @@
      <Compile Include="Assets\Scripts\RotatePreview.cs" />
      <Compile Include="Assets\Scripts\ScenceGenerator.cs" />
      <Compile Include="Assets\Scripts\Scene.cs" />
+     <Compile Include="Assets\Scripts\SelectMiniGame.cs" />
      <Compile Include="Assets\Scripts\SettingClickButtonController.cs" />
      <Compile Include="Assets\Scripts\SettingMusicButtonController.cs" />
      <Compile Include="Assets\Scripts\ShowItemDetail.cs" />
