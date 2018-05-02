@@ -9,8 +9,8 @@ public class Character : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		render = GetComponent<Renderer>();
-		render.enabled = true;
+//		render = GetComponent<Renderer>();
+//		render.enabled = true;
 //		print (thisCharacter.info+" : "+thisCharacter.name);
 	}
 	
