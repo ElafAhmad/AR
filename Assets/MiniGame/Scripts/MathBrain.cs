@@ -19,6 +19,8 @@ public class MathBrain : MonoBehaviour {
 	public Jornal jornal;
 	public MasterGameVolumeController mGVC;
 
+	public player player;
+
 	void Start() 
 	{
 //		buttons = GameObject.FindGameObjectsWithTag("AnswerButton");
@@ -140,6 +142,7 @@ public class MathBrain : MonoBehaviour {
 			Invoke ("Correct", 2.5f);
 			jornal.ReceiveNewClue (item.thisItem);
 			Debug.Log("Correct Answer");
+			player.AddXP (25);
 		} else {
 			btn.GetComponent<Image>().color = Color.red;
 			wrong.gameObject.SetActive (true);

@@ -17,10 +17,6 @@ public class MasterVolumeController : MonoBehaviour {
 		musicMute = true;
 		clickMute = true;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	}
 
 	public void PlayClickSound(){
 		clickSound.Play ();
@@ -29,11 +25,23 @@ public class MasterVolumeController : MonoBehaviour {
 	public void OnOffMusic(){
 		musicMute = musicSound.mute;
 		musicSound.mute = !musicSound.mute;
+		Save();
 	}
 
 	public void OnOffEffect(){
 		clickMute = clickSound.mute;
 		clickSound.mute = !clickSound.mute;
+		Save();
+	}
+
+	public void Save() {
+		PlayerPrefs.SetInt("MusicMute", musicMute ? 1 : 0); // Sets to 1 if true, 0 if false
+		PlayerPrefs.SetInt("ClickMute", clickMute ? 1 : 0);
+	}
+
+	public void Load() {
+		musicMute = PlayerPrefs.GetInt("MusicMute") == 1 ? true : false; // set to true if 1, false if 0
+		clickMute = PlayerPrefs.GetInt("clickMute") == 1 ? true : false;
 	}
 		
 }

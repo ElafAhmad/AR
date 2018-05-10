@@ -1,10 +1,11 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Character.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\MiniGame\Scripts\MathBrain.cs">
     <Files>
+      <File FileName="Assets\Scripts\MasterGameVolumeController.cs" Line="63" Column="2" />
       <File FileName="Assets\Scripts\Clue.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\ClueManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\ClueGenerate.cs" Line="210" Column="36" />
+      <File FileName="Assets\Scripts\ClueGenerate.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Scene.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\ScenceGenerator.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Temp.cs" Line="1" Column="1" />
@@ -15,12 +16,13 @@
       <File FileName="Assets\Scripts\ShowItemPic.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\ShowRotateReview.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\RotatePreview.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\MasterVolumeController.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\MasterGameVolumeController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\MasterVolumeController.cs" Line="36" Column="2" />
       <File FileName="Assets\Scripts\SettingMusicButtonController.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\SettingClickButtonController.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Hint.cs" Line="9" Column="19" />
-      <File FileName="Assets\MiniGame\Scripts\MathBrain.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Hint.cs" Line="1" Column="1" />
+      <File FileName="Assets\MiniGame\Scripts\MathBrain.cs" Line="151" Column="4" />
+      <File FileName="Assets\MiniGame\Scripts\PatternBrain.cs" Line="185" Column="42" />
+      <File FileName="Assets\Scripts\SelectMiniGame.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\CheckIsMiniGame.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\ButtonCooldown.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Info.cs" Line="1" Column="1" />
@@ -28,6 +30,10 @@
       <File FileName="Assets\Scripts\ShowNPCDetail.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\NPCinfo.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Result.cs" Line="1" Column="1" />
+      <File FileName="Assets\MiniGame\Scripts\Glow.cs" Line="1" Column="1" />
+      <File FileName="Assets\Save Module\Save.cs" Line="22" Column="2" />
+      <File FileName="Assets\Save Module\player.cs" Line="67" Column="1" />
+      <File FileName="Assets\Save Module\SaveMainMenu.cs" Line="11" Column="35" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

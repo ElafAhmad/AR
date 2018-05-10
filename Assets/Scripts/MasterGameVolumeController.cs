@@ -49,6 +49,7 @@ public class MasterGameVolumeController : MonoBehaviour {
 	public void OnOffMusic(){
 		musicMute = musicSound.mute;
 		musicSound.mute = !musicSound.mute;
+		Save();
 
 	}
 
@@ -57,6 +58,18 @@ public class MasterGameVolumeController : MonoBehaviour {
 		clickSound.mute = !clickSound.mute;
 		correctSound.mute = !clickSound.mute;
 		incorrectSound.mute = !clickSound.mute;
+		Save();
+	}
+
+	public void Save()
+	{
+		PlayerPrefs.SetInt("MusicGameMute", musicMute ? 1 : 0); // Sets to 1 if true, 0 if false
+		PlayerPrefs.SetInt("ClickGameMute", clickMute ? 1 : 0);
+	}
+
+	public void Load() {
+		musicMute = PlayerPrefs.GetInt("MusicGameMute") == 1 ? true : false; // set to true if 1, false if 0
+		clickMute = PlayerPrefs.GetInt("ClickGameMute") == 1 ? true : false;
 	}
 		
 }

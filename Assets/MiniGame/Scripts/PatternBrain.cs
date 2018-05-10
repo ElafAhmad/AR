@@ -27,6 +27,8 @@ public class PatternBrain : MonoBehaviour
 	public Jornal jornal;
 	public MasterGameVolumeController mGVC;
 
+	public player player;
+
     void Start()
     {
 //         foreach (GameObject buttonObj in GameObject.FindGameObjectsWithTag("ColorButton"))   // Finding all buttons
@@ -181,6 +183,7 @@ public class PatternBrain : MonoBehaviour
 			mGVC.PlayCorrectSound ();
 			Invoke ("Correct", 2.5f);
 			jornal.ReceiveNewClue (item.thisItem);
+			player.AddXP (25);
 		} else {
 			wrong.gameObject.SetActive (true);
 			mGVC.PlayIncorrectSound ();
