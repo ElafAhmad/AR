@@ -58,6 +58,8 @@ public class ClueGenerate : MonoBehaviour {
 
 	public GameObject cam;
 
+	public SaveGameData sGD;
+
 	void Start () {
 		cM = FindObjectOfType<ClueManager> ();
 		sG = FindObjectOfType<ScenceGenerator> ();
@@ -70,9 +72,26 @@ public class ClueGenerate : MonoBehaviour {
 		DrugItem = cM.DrugItemList.ToArray();
 		DrugCharacter = cM.DrugCharacterList.ToArray();
 
-		sceneName = SelectScene ();
-		print ("Select : " + sceneName + " Scene.");
-		SelectSceneFromSG ();
+		sGD.LoadFile ();
+//		sceneName = sGD.currentSceneName;
+//		sceneInfo = sGD.currentSceneInfo;
+
+		if ((sGD.currentSceneName != "No Name") && (sGD.currentSceneInfo != null)) {
+			sceneName = sGD.currentSceneName;
+			sceneInfo = sGD.currentSceneInfo;
+		} else {
+			sceneName = SelectScene ();
+			print ("Select : " + sceneName + " Scene.");
+			SelectSceneFromSG ();
+			sGD.currentSceneName = sceneName;
+			sGD.currentSceneInfo = sceneInfo;
+			sGD.SaveFile ();
+		}
+
+//		sceneName = SelectScene ();
+//		print ("Select : " + sceneName + " Scene.");
+//		SelectSceneFromSG ();
+
 		ShowIntro ();
 		ConstructPool ();
 

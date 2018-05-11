@@ -11,10 +11,11 @@ public class player : MonoBehaviour {
 
 	public void AddXP(int increase) {
 		xp += increase;
-		
-		if (xp % 100 == 0 && level<100) { // Level up if passes 100
-			level++;
-		}
+		int templv = xp / 100;
+//		if (xp % 100 == 0 && level<100) { // Level up if passes 100
+//			level++;
+//		}
+		level = templv;
 		UpdateText();
 		Save();
 	}
@@ -37,6 +38,7 @@ public class player : MonoBehaviour {
 
 	private void UpdateText(){
 		LevelText.text = level.ToString ();
+		expText.text = xp.ToString ();
 		int exp = xp % 100;
 		if (level < 100) {
 			switch (exp) {

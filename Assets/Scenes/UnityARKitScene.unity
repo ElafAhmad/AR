@@ -1516,6 +1516,7 @@ GameObject:
   m_Component:
   - component: {fileID: 92127291}
   - component: {fileID: 92127290}
+  - component: {fileID: 92127292}
   m_Layer: 0
   m_Name: SaveManager
   m_TagString: Untagged
@@ -1549,6 +1550,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &92127292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 92127289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d8f85bc60ab94c49baf55e1e27a8857, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentStatus: Saved
+  currentSceneName: 
+  currentSceneInfo:
+    name: No Name
+    background: No Backgroung
+    real1: No Information.
+    real2: No Information.
+    fake: No Information.
+    itemName1: 
+    itemDescription1: 
+    itemName2: 
+    itemDescription2: 
+    itemName3: 
+    itemDescription3: 
 --- !u!1 &92950254
 GameObject:
   m_ObjectHideFlags: 0
@@ -1653,9 +1679,23 @@ MonoBehaviour:
   cM: {fileID: 0}
   cluePos: []
   sG: {fileID: 0}
+  sceneList: []
+  sceneInfo:
+    name: No Name
+    background: No Backgroung
+    real1: No Information.
+    real2: No Information.
+    fake: No Information.
+    itemName1: 
+    itemDescription1: 
+    itemName2: 
+    itemDescription2: 
+    itemName3: 
+    itemDescription3: 
   sceneIntro: {fileID: 950717857}
   nameForScene: {fileID: 546594384}
   cam: {fileID: 7}
+  sGD: {fileID: 92127292}
 --- !u!4 &102567959
 Transform:
   m_ObjectHideFlags: 0
@@ -4815,7 +4855,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &487956731
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5355,7 +5395,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: -0.00015258789}
-  m_SizeDelta: {x: -1253.1334, y: 100}
+  m_SizeDelta: {x: 0, y: 100}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &546594381
 MonoBehaviour:
@@ -10624,7 +10664,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1122471347
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15147,6 +15187,8 @@ MonoBehaviour:
   trueSprite: {fileID: 21300000, guid: 88924534b9ea345778719b733ed99479, type: 3}
   falseSprite: {fileID: 21300000, guid: d634d038ef5454d0daa664d6d2de6cda, type: 3}
   mGVC: {fileID: 1888987957}
+  player: {fileID: 268054588}
+  sGD: {fileID: 92127292}
 --- !u!4 &1604431425
 Transform:
   m_ObjectHideFlags: 0
@@ -17042,6 +17084,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4ab9729efce6cc4ebe5b0178b0fea5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  robberySceneList: []
+  murderSceneList: []
+  drugSceneList: []
 --- !u!4 &1813698296
 Transform:
   m_ObjectHideFlags: 0
@@ -17069,7 +17114,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1819906899
 RectTransform:
   m_ObjectHideFlags: 0

@@ -17,6 +17,8 @@ public class Result : MonoBehaviour {
 	public Sprite trueSprite;
 	public Sprite falseSprite;
 	public MasterGameVolumeController mGVC;
+	public player player;
+	public SaveGameData sGD;
 
 	// Use this for initialization
 	void Start () {
@@ -35,6 +37,7 @@ public class Result : MonoBehaviour {
 				resultImage.sprite = trueSprite;
 				resultImage.color = new Color32 (143, 235, 22, 255);
 				mGVC.PlayCorrectSound ();
+				player.AddXP (75);
 				Invoke ("NewGame", 3.0f);
 			} else {
 				resultPanel.SetActive (true);
@@ -58,6 +61,7 @@ public class Result : MonoBehaviour {
 	void NewGame(){
 		GameObject tmp = GameObject.FindGameObjectWithTag ("Temp");
 		Destroy (tmp);
+		sGD.ResetFile ();
 		SceneManager.LoadScene (0);
 	}
 }
