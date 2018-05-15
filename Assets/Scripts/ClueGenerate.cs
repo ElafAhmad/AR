@@ -145,6 +145,7 @@ public class ClueGenerate : MonoBehaviour {
 //			}
 			} else if (selectedClues [i].type == "character") {
 				Vector3 pos = new Vector3 (cam.transform.position.x, obj.transform.position.y, cam.transform.position.z);
+				obj.transform.localScale = 	new Vector3 (0.06f, 0.06f, 0.06f);
 				obj.transform.LookAt (pos);
 				var tmp = obj.GetComponent<Character> ();
 				selectedClues [i].isReal = true;
@@ -177,6 +178,7 @@ public class ClueGenerate : MonoBehaviour {
 //			}
 			} else if (lureClues [i].type == "character") {
 				Vector3 pos = new Vector3 (cam.transform.position.x, obj.transform.position.y, cam.transform.position.z);
+				obj.transform.localScale = 	new Vector3 (0.06f, 0.06f, 0.06f);
 				obj.transform.LookAt (pos);
 				var tmp = obj.GetComponent<Character> ();
 				if (i == 2) {
