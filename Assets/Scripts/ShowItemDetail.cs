@@ -9,12 +9,6 @@ public class ShowItemDetail : MonoBehaviour {
 	public Item item;
 	PickUpObject pUO;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
 	void Update () {
 		GameObject gO = GameObject.Find ("Main Camera");
 		pUO = gO.GetComponent<PickUpObject> ();

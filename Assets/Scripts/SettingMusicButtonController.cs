@@ -9,13 +9,11 @@ public class SettingMusicButtonController : MonoBehaviour {
 	public bool musicMute;
 	Temp t;
 
-	// Use this for initialization
 	void Start () {
 		t = FindObjectOfType<Temp> ();
 		musicMute = t.musicMute;
 	}
-	
-	// Update is called once per frame
+
 	void Update () {
 		t = FindObjectOfType<Temp> ();
 		musicMute = t.musicMute;

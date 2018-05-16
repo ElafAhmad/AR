@@ -9,7 +9,7 @@ public class Result : MonoBehaviour {
 	public GameObject resultPanel;
 	public Jornal j;
 	public Temp t;
-//	public List<string> nameList = new List<string> ();
+
 	public Text resultName;
 
 	public GameObject imagePanel;
@@ -20,12 +20,8 @@ public class Result : MonoBehaviour {
 	public player player;
 	public SaveGameData sGD;
 
-	// Use this for initialization
 	void Start () {
 		t = FindObjectOfType<Temp> ();
-//		nameList.Add (t.goalName);
-//		nameList.Add (t.lureName [0]);
-//		nameList.Add (t.lureName [1]);
 	}
 
 	public void CheckJornal(Text name){

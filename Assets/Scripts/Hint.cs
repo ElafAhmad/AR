@@ -15,20 +15,10 @@ public class Hint : MonoBehaviour {
 	public Sprite cdSprite;
 	public Sprite cdResetSprite;
 
-	// Use this for initialization
 	void Start () {
 		cam = GameObject.Find ("Main Camera");
 		t = FindObjectOfType<Temp> ();
 		cluePos = t.cluePos;
-//		for (int i = 0; i<cluePos.Length;i++){
-//			Vector3 tmp = cluePos [i];
-//			tmp [1] = tmp [1] + 0.5f;
-//			cluePos [i] = tmp;
-//		}
-	}
-	
-	// Update is called once per frame
-	void Update () {
 	}
 
 	public void ShowHint(){

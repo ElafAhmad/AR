@@ -16,14 +16,8 @@ public class Jornal : MonoBehaviour {
 	public Sprite notifySprite;
 	public Sprite normalSprite;
 
-	// Use this for initialization
 	void Start () {
 		t = FindObjectOfType<Temp> ();
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
 		
 	}
 

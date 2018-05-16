@@ -15,14 +15,7 @@ public class ClueGenerate : MonoBehaviour {
 	public Clue[] cluesCharPool;
 	public Clue[] items;
 
-//	public GameObject[] itemsGo;
-
-//	private List<GameObject> itemsList = new List<GameObject> ();
 	public Clue[] characters;
-
-//	public GameObject[] charactersGo;
-
-//	private List<GameObject> charactersList = new List<GameObject> ();
 
 	private List<Clue> itemRealClueLists = new List<Clue> ();
 	private List<Clue> characterRealClueLists = new List<Clue> ();
@@ -30,12 +23,6 @@ public class ClueGenerate : MonoBehaviour {
 	private List<Clue> itemLureClueLists = new List<Clue> ();
 	private List<Clue> charLureClueLists = new List<Clue> ();
 	public Clue[] lureClues;
-
-//	private List<GameObject> itemObjectLists = new List<GameObject> ();
-//	private List<GameObject> characterObjectLists = new List<GameObject> ();
-//	public GameObject[] selectedObjects;
-//	private List<GameObject> lureObjectLists = new List<GameObject> ();
-//	public GameObject[] lureObjects;
 
 	public ClueManager cM;
 	public Clue[] MurderItem;
@@ -73,8 +60,6 @@ public class ClueGenerate : MonoBehaviour {
 		DrugCharacter = cM.DrugCharacterList.ToArray();
 
 		sGD.LoadFile ();
-//		sceneName = sGD.currentSceneName;
-//		sceneInfo = sGD.currentSceneInfo;
 
 		if ((sGD.currentSceneName != "No Name") && (sGD.currentSceneInfo != null)) {
 			sceneName = sGD.currentSceneName;
@@ -88,42 +73,12 @@ public class ClueGenerate : MonoBehaviour {
 			sGD.SaveFile ();
 		}
 
-//		sceneName = SelectScene ();
-//		print ("Select : " + sceneName + " Scene.");
-//		SelectSceneFromSG ();
-
 		ShowIntro ();
 		ConstructPool ();
 
 		SelectItemNCharacter();
 		hitParent = GameObject.Find ("HitCubeParent");
-//		SelectLureObject ();
 		SelectLureClue ();
-
-//		foreach (GameObject go in GameObject.FindObjectsOfType(typeof(GameObject))) {
-
-//		foreach (GameObject go in item) {
-//			if (go.tag.Contains (sceneName)) {
-//				selectedItem.Add (go);
-//			}
-//		}
-//		print (selectedItem.Count);
-//		vehicles = GameObject.FindGameObjectsWithTag ("Vehicle");
-//		scenes = GetComponents<GameObject> ();
-
-//		print (selectedClues.Length);
-//		print ("0"+selectedClues[0].name);
-//		Instantiate (selectedClues [0].model, new Vector3 (1f, 2f,1f),Quaternion.identity);
-//		print ("1"+selectedClues[1].name);
-//		Instantiate (selectedClues [1].model, new Vector3 (1f, 2f,1f),Quaternion.identity);
-//		print ("2"+selectedClues[2].name);
-//		Instantiate (selectedClues [2].model, new Vector3 (1f, 2f,1f),Quaternion.identity);
-//		print ("3"+selectedClues[3].name);
-//		Instantiate (selectedClues [3].model, new Vector3 (1f, 2f,1f),Quaternion.identity);
-
-//		for (int i = 0; i < 4; i++) {
-//			print (i+":"+selectedClues[i].name);
-//		}
 
 		for (int i=0; i<selectedClues.Length; i++){
 			var posX = Random.Range (-2f, 1.5f);
@@ -142,7 +97,6 @@ public class ClueGenerate : MonoBehaviour {
 				var tmp = obj.GetComponent<Item> ();
 				selectedClues[i].isReal = true;
 				tmp.thisItem = selectedClues [i];
-//			}
 			} else if (selectedClues [i].type == "character") {
 				Vector3 pos = new Vector3 (cam.transform.position.x, obj.transform.position.y, cam.transform.position.z);
 				obj.transform.localScale = 	new Vector3 (0.06f, 0.06f, 0.06f);
@@ -175,7 +129,6 @@ public class ClueGenerate : MonoBehaviour {
 			if (lureClues [i].type == "item") {
 				var tmp = obj.GetComponent<Item> ();
 				tmp.thisItem = lureClues [i];
-//			}
 			} else if (lureClues [i].type == "character") {
 				Vector3 pos = new Vector3 (cam.transform.position.x, obj.transform.position.y, cam.transform.position.z);
 				obj.transform.localScale = 	new Vector3 (0.06f, 0.06f, 0.06f);
@@ -198,11 +151,6 @@ public class ClueGenerate : MonoBehaviour {
 		cluePos = cluePosLists.ToArray();
 		t.cluePos = cluePos;
 
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
 	}
 
 	void SelectSceneFromSG(){
@@ -228,8 +176,6 @@ public class ClueGenerate : MonoBehaviour {
 
 	string SelectScene(){
 		selectedSceneName = sceneNames [Random.Range (0, 3)];
-//		{"Robbery","Murder","Drug"}
-//		selectedSceneName = sceneNames [1];
 		return selectedSceneName ;
 	}
 
@@ -262,60 +208,17 @@ public class ClueGenerate : MonoBehaviour {
 	}
 
 	void SelectItemNCharacter(){
-//		if (sceneName == "Robbery") {
-//			for (int i = 0; i < RobberyItem.Length; i++) {
-//				var temp = RobberyItem [i].model;
-//				itemsList.Add(temp);
-//			}
-//			itemsGo = itemsList.ToArray();
-//			for (int i = 0; i < RobberyCharacter.Length; i++) {
-//				var temp = RobberyCharacter [i].model;
-//				charactersList.Add(temp);
-//			}
-//			charactersGo = charactersList.ToArray();
-//			SelectTrueObject ();
-//
-//		} else if (sceneName == "Murder") {
-//			for (int i = 0; i < MurderItem.Length; i++) {
-//				var temp = MurderItem [i].model;
-//				itemsList.Add(temp);
-//			}
-//			itemsGo = itemsList.ToArray();
-//			for (int i = 0; i < MurderCharacter.Length; i++) {
-//				var temp = MurderCharacter [i].model;
-//				charactersList.Add(temp);
-//			}
-//			charactersGo = charactersList.ToArray();
-//			SelectTrueObject ();
-//
-//		} else if (sceneName == "Drug") {
-//			for (int i = 0; i < DrugItem.Length; i++) {
-//				var temp = DrugItem [i].model;
-//				itemsList.Add(temp);
-//			}
-//			itemsGo = itemsList.ToArray();
-//			for (int i = 0; i < DrugCharacter.Length; i++) {
-//				var temp = DrugCharacter [i].model;
-//				charactersList.Add(temp);
-//			}
-//			charactersGo = charactersList.ToArray();
-//			SelectTrueObject ();
-//		}
-
 		if (sceneName == "Robbery") {
 			items = RobberyItem;
 			characters = RobberyCharacter;
-//			SelectRealClue ();
 			SelectRealClueV2 ();
 		} else if (sceneName == "Murder") {
 			items = MurderItem;
 			characters = MurderCharacter;
-//			SelectRealClue ();
 			SelectRealClueV2 ();
 		} else if (sceneName == "Drug") {
 			items = DrugItem;
 			characters = DrugCharacter;
-//			SelectRealClue ();
 			SelectRealClueV2 ();
 		}
 
@@ -330,7 +233,6 @@ public class ClueGenerate : MonoBehaviour {
 		for (int i = 0; i < 3; i++) {
 			var index = Random.Range (0, itemRealClueLists.Count);
 			selectedClues [i] = itemRealClueLists [index];
-//			selectedClues[i].model.SetActive(true);
 			print ("Select : " + selectedClues[i].name + " as Real Clue.");
 			itemRealClueLists.RemoveAt(index);
 		}
@@ -340,7 +242,6 @@ public class ClueGenerate : MonoBehaviour {
 		for (int i = 0; i < 1; i++) {
 			var index = Random.Range(0, characterRealClueLists.Count);
 			selectedClues[i+3] = characterRealClueLists[index];
-//			selectedClues[i+2].model.SetActive(true);
 			print ("Select : " + selectedClues[i+3].name + " as Goal.");
 			characterRealClueLists.RemoveAt(index);
 		}
@@ -357,7 +258,6 @@ public class ClueGenerate : MonoBehaviour {
 		for (int i = 0; i < 2; i++) {
 			var index = Random.Range(0, itemLureClueLists.Count);
 			lureClues[i] = itemLureClueLists[index];
-//			lureClues[i].model.SetActive(true);
 			print ("Select : " + lureClues[i].name + " as Fake Clue.");
 			itemLureClueLists.RemoveAt(index);
 		}
@@ -367,7 +267,6 @@ public class ClueGenerate : MonoBehaviour {
 		for (int i = 0; i < 2; i++) {
 			var index = Random.Range(0, charLureClueLists.Count);
 			lureClues[i+2] = charLureClueLists[index];
-			//			lureClues[i].model.SetActive(true);
 			print ("Select : " + lureClues[i+2].name + " as Fake Character.");
 			charLureClueLists.RemoveAt(index);
 		}
@@ -402,11 +301,6 @@ public class ClueGenerate : MonoBehaviour {
 			}
 		}
 
-//		print (tempItemClueslist.Count);
-//		for (int i = 0; i < tempItemClueslist.Count; i++) {
-//			print (tempItemClueslist [i].name);
-//		}
-
 		items = tempItemClueslist.ToArray ();
 		print ("Real Items : " + items.Length + " Remaining.");
 
@@ -420,41 +314,4 @@ public class ClueGenerate : MonoBehaviour {
 		selectedClues = selectedClueslist.ToArray ();
 		print ("Real Characters : " + characters.Length + " Remaining.");
 	}
-
-//-----------------------------------------------------------------------------------------------------------------------------------------------------------
-
-//	void SelectTrueObject(){
-//		itemObjectLists =  itemsGo.ToList ();
-//		characterObjectLists =  charactersGo.ToList ();
-//		selectedObjects = new GameObject[3];
-//
-//		for (int i = 0; i < 2; i++) {
-//			var index = Random.Range(0, itemObjectLists.Count);
-//			selectedObjects[i] = itemObjectLists[index];
-//			selectedObjects[i].SetActive(true);
-//			itemObjectLists.RemoveAt(index);
-//		}
-//		itemsGo = itemObjectLists.ToArray ();
-//
-//		for (int i = 0; i < 1; i++) {
-//			var index = Random.Range(0, characterObjectLists.Count);
-//			selectedObjects[i+2] = characterObjectLists[index];
-//			selectedObjects[i+2].SetActive(true);
-//			characterObjectLists.RemoveAt(index);
-//		}
-//		charactersGo = characterObjectLists.ToArray ();
-//	}
-//
-//	void SelectLureObject(){
-//		lureObjectLists =  itemspool.ToList ();
-//		lureObjects = new GameObject[2];
-//
-//		for (int i = 0; i < 2; i++) {
-//			var index = Random.Range(0, lureObjectLists.Count);
-//			lureObjects[i] = lureObjectLists[index];
-//			lureObjects[i].SetActive(true);
-//			lureObjectLists.RemoveAt(index);
-//		}
-//		itemspool = lureObjectLists.ToArray ();
-//	}
 }

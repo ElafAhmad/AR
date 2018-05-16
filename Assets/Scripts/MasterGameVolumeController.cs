@@ -14,7 +14,6 @@ public class MasterGameVolumeController : MonoBehaviour {
 	public AudioSource correctSound;
 	public AudioSource incorrectSound;
 
-	// Use this for initialization
 	void Start () {
 		t = FindObjectOfType<Temp> ();
 		musicMute = t.musicMute;
@@ -24,8 +23,7 @@ public class MasterGameVolumeController : MonoBehaviour {
 		correctSound.mute = !clickMute;
 		incorrectSound.mute = !clickMute;
 	}
-	
-	// Update is called once per frame
+
 	void Update () {
 		t = FindObjectOfType<Temp> ();
 		clickSound.mute = !clickMute;
@@ -50,7 +48,6 @@ public class MasterGameVolumeController : MonoBehaviour {
 		musicMute = musicSound.mute;
 		musicSound.mute = !musicSound.mute;
 		Save();
-
 	}
 
 	public void OnOffEffect(){

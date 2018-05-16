@@ -20,11 +20,9 @@ public class PickUpObject : MonoBehaviour {
 	public GameObject talkPanel;
 	public GameObject npcPanel;
 
-	// Use this for initialization
 	void Start () {
 	}
-	
-	// Update is called once per frame
+
 	void Update () {
 		RaycastHit hit;
 		if (Physics.Raycast (cam.transform.position, cam.transform.forward, out hit, 0.50f)) {
@@ -55,7 +53,6 @@ public class PickUpObject : MonoBehaviour {
 	public void CloseTalk(){
 		isTalk = false;
 		isPickup = false;
-		//		pickUpPanel.SetActive (true);
 		talkPanel.SetActive (false);
 		jornalButtonPanel.SetActive (true);
 		hintButtonPanel.SetActive (true);
@@ -73,7 +70,6 @@ public class PickUpObject : MonoBehaviour {
 	public void ClosePickup(){
 		isPickup = false;
 		isTalk = false;
-//		pickUpPanel.SetActive (true);
 		itemPanel.SetActive (false);
 		jornalButtonPanel.SetActive (true);
 		hintButtonPanel.SetActive (true);

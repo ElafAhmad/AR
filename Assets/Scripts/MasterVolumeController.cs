@@ -12,7 +12,6 @@ public class MasterVolumeController : MonoBehaviour {
 	public bool clickMute;
 	private int scenceIndex;
 
-	// Use this for initialization
 	void Start () {
 		musicMute = true;
 		clickMute = true;

@@ -12,7 +12,6 @@ public class NPCinfo : MonoBehaviour {
 	private List<string> tempName = new List<string> ();
 	public Temp t;
 
-	// Use this for initialization
 	void Start () {
 		t = FindObjectOfType<Temp> ();
 		criminalName.Add (t.goalName);

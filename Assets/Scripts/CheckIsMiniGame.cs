@@ -9,15 +9,6 @@ public class CheckIsMiniGame : MonoBehaviour {
 	private Image isAbleImage;
 	public Sprite isAbleSprite;
 	public Sprite isUnableSprite;
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-
-	}
 
 	public void CheckMiniGame(){
 		GameObject gO = GameObject.Find ("Main Camera");

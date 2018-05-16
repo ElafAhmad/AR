@@ -12,12 +12,6 @@ public class ShowNPCDetail : MonoBehaviour {
 	PickUpObject pUO;
 	public Jornal jornal;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
 	void Update () {
 		GameObject gO = GameObject.Find ("Main Camera");
 		pUO = gO.GetComponent<PickUpObject> ();

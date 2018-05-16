@@ -13,16 +13,13 @@ public class Temp : MonoBehaviour {
 	public string goalName;
 	public List<string> lureName = new List<string> ();
 
-	// Use this for initialization
 	void Start () {
 		DontDestroyOnLoad (this);
 	}
-	
-	// Update is called once per frame
+
 	void Update () {
 		int index = SceneManager.GetActiveScene().buildIndex;
 		CheckSceneIndex (index);
-
 	}
 
 	public void CheckSceneIndex(int index){

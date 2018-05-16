@@ -9,14 +9,6 @@ public class SaveGameData : MonoBehaviour {
 	public string currentStatus = "Saved";
 	public string currentSceneName;
 	public Scene currentSceneInfo;
-
-	// Use this for initialization
-	void Start () {
-//		currentSceneInfo = null;
-//		currentSceneName = "No Name";
-//		SaveFile();
-//		LoadFile();
-	}
 	
 	public void SaveFile()
 	{

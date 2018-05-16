@@ -6,7 +6,6 @@ public class Save : MonoBehaviour {
 
 	public player player;
 	public MasterGameVolumeController masterGame;
-	// public MasterVolumeController master;
 
 	private void Awake() {
 		LoadGame();
@@ -15,7 +14,6 @@ public class Save : MonoBehaviour {
 	{
 		player.Save();
 		masterGame.Save();
-		// master.Save();
 	}
 
 	public void LoadGame()
@@ -27,10 +25,5 @@ public class Save : MonoBehaviour {
 		{
 			masterGame.Load();
 		}
-
-		// if (PlayerPrefs.HasKey("MusicMute"))
-		// {
-		// 	master.Load();
-		// }
 	}
 }

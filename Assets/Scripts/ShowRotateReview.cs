@@ -9,11 +9,6 @@ public class ShowRotateReview : MonoBehaviour {
 	public bool renTest; 
 	PickUpObject pUO;
 	GameObject go;
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
 	public void InstantRotatePreview(){
 		GameObject gO = GameObject.Find ("Main Camera");

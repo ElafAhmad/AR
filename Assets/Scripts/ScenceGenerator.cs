@@ -8,7 +8,6 @@ public class ScenceGenerator : MonoBehaviour {
 	public List<Scene> murderSceneList = new List<Scene> ();
 	public List<Scene> drugSceneList = new List<Scene> ();
 
-	// Use this for initialization
 	void Awake () {
 		MakeSceneList ("Robbery", robberySceneList);
 		MakeSceneList ("Murder", murderSceneList);

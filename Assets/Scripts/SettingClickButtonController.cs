@@ -9,13 +9,11 @@ public class SettingClickButtonController : MonoBehaviour {
 	public bool clickMute;
 	Temp t;
 
-	// Use this for initialization
 	void Start () {
 		t = FindObjectOfType<Temp> ();
 		clickMute = t.clickMute;
 	}
-	
-	// Update is called once per frame
+
 	void Update () {
 		t = FindObjectOfType<Temp> ();
 		clickMute = t.clickMute;
